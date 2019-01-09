@@ -6,14 +6,34 @@ namespace arrayShift
     {
         static void Main(string[] args)
         {
-            int[] arrArg = new int[] {2, 4, 6, 8};
-            ArrayShift(arrArg, 5);
+            int[] arrArg1 = new int[] {2, 4, 6, 8}; //even and sorted
+            ArrayShift(arrArg1, 5);
+            Console.WriteLine(""); //just to space out the output
+
+            int[] arrArg2 = new int[] {8, 9, 1, 3, 6}; // odd and not sorted
+            ArrayShift(arrArg2, 100);
+            Console.WriteLine(""); //just to space out the output
+
+            int[] arrArg3 = new int[] {}; //empty array
+            ArrayShift(arrArg3, 10);
+            Console.WriteLine(""); //just to space out the output
+
             Console.ReadLine(); //so it doesn;t auto exit when it is done
         }
 
         private static int[] ArrayShift(int[] arr, int num)
         {
-            int midArr = (arr.Length) / 2; //if length is odd will it round up or down (if down, then need func to round up)
+            int midArr = 0;
+            if (arr.Length % 2 == 0)
+            {
+                midArr = arr.Length / 2;
+            }
+            else
+            {
+                midArr = (arr.Length / 2) + 1; //for when it is odd and instruction said we round up
+            }
+
+            //int midArr = (arr.Length) / 2;
             int newArrLength = arr.Length + 1;
             int[] newArr = new int[newArrLength];
 
