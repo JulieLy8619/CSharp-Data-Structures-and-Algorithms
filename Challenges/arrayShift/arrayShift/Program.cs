@@ -30,7 +30,7 @@ namespace arrayShift
             }
             else
             {
-                midArr = (arr.Length / 2) + 1; //for when it is odd and instruction said we round up
+                midArr = (arr.Length / 2) + 1; //for when it is odd and instruction said we round up 
             }
 
             //int midArr = (arr.Length) / 2;
