@@ -9,6 +9,6 @@ We chose to create a new array which has a Big O of O(n) because in C# we cannot
 
 ## Solution
 
-![WhiteboardImage](../../assets/CodeChall1Image.jpg)
-![ConsoleImage](../../assets/CodeChall1ImageConsole.jpg)_
+![WhiteboardImage](../../../assets/CodeChall1Image.jpg)
+![ConsoleImage](../../../../assets/CodeChall1ImageConsole.jpg)_
 
