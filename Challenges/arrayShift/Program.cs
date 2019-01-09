@@ -7,16 +7,18 @@ namespace arrayShift
         static void Main(string[] args)
         {
             int[] arrArg = new int[] {2, 4, 6, 8};
+            ArrayShift(arrArg, 5);
             Console.ReadLine(); //so it doesn;t auto exit when it is done
         }
 
-        private static Array[] ArrayShift(int[] arr, int num)
+        private static int[] ArrayShift(int[] arr, int num)
         {
-            int midArr = (arr.Length)/2; //if length is odd will it round up or down (if down, then need func to round up)
+            int midArr = (arr.Length) / 2; //if length is odd will it round up or down (if down, then need func to round up)
             int newArrLength = arr.Length + 1;
             int[] newArr = new int[newArrLength];
 
             //loop through param arr and populate new array and insert new num
+            Console.WriteLine("Your new Array is ");
             for (int i = 0; i < newArrLength; i++)
             {
                 if (i == midArr)
@@ -29,10 +31,12 @@ namespace arrayShift
                 }
                 else if (i > midArr)
                 {
-                    newArr[i] = arr[i-1];
+                    newArr[i] = arr[i - 1];
                 }
+
+                Console.Write(newArr[i] + " ");
             }
-            return newArr[];
+            return newArr;
         }
     }
 }
