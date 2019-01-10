@@ -10,7 +10,7 @@ namespace XUnitTestProject1
         public void TestBinarySearchWorks()
         {
             int[] arr1 = new int[] { 1, 2, 3, 4 };
-            Assert.Equal(1, Program.BinarySearch(arr1,3));
+            Assert.Equal(2, Program.BinarySearch(arr1,3));
         }
         [Fact]
         public void TestBinarySearchNotWorks()
