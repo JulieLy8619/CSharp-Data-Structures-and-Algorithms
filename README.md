@@ -8,8 +8,10 @@
 
 3. [Challenge: Array Binary Search](Challenges/BinarySearch)
 
-4. [Implementation: Linked List](#)
+4. [Challenge: Linked List](Challenges/)
 
 5. [Challenge 5](#)
 
 6. [Challenge 6](#)
+
+EC. [Extra Credit: Fibonacci](Challenges/ECFibonacci)

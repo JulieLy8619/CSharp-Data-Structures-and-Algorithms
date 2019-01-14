@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECFib", "ECFib\ECFib.csproj", "{8648E61D-3F19-4F26-941A-52DDC9240A53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECFib-unittesting", "..\ECFib-unittesting\ECFib-unittesting.csproj", "{C55A9283-81D8-414B-9AEE-DBA4B9EB9C4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8648E61D-3F19-4F26-941A-52DDC9240A53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8648E61D-3F19-4F26-941A-52DDC9240A53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8648E61D-3F19-4F26-941A-52DDC9240A53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8648E61D-3F19-4F26-941A-52DDC9240A53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C55A9283-81D8-414B-9AEE-DBA4B9EB9C4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C55A9283-81D8-414B-9AEE-DBA4B9EB9C4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C55A9283-81D8-414B-9AEE-DBA4B9EB9C4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C55A9283-81D8-414B-9AEE-DBA4B9EB9C4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6AF6801D-9880-408D-AB8C-F81CC87B32FD}
+	EndGlobalSection
+EndGlobal
