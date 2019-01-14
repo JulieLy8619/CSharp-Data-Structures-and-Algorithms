@@ -91,14 +91,33 @@ namespace _401d6LinkedList.Classes
 
         public void InsertBefore(int value, int newValue)
         {
+            //might still need to add if value isn't in list
             Current = Head;
-            while (Current.Next != null)
+            if (Head == null) 
             {
-                if (Current.Next.Value == value)
+                Console.WriteLine("The linked list is Null");
+            }
+            else if (Current.Value == value)
+            {
+                Insert(newValue);
+                return; //to exit because I don't need to go through the rest of the list
+            }
+            else
+            {
+
+                while (Current.Next != null)
                 {
-                    Node newNode = new Node(newValue);
-                    newNode.Next = Current.Next;
-                    Current.Next = newNode;
+                    if (Current.Next.Value == value)
+                    {
+                        Node newNode = new Node(newValue);
+                        newNode.Next = Current.Next;
+                        Current.Next = newNode;
+                        return;//to exit because I don't need to go through the rest of the list
+                    }
+                    else
+                    {
+                        Current = Current.Next;
+                    }
                 }
             }
         }
