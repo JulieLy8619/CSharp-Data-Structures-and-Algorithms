@@ -88,5 +88,19 @@ namespace _401d6LinkedList.Classes
             Current.Next = newNode;
             
         }
+
+        public void InsertBefore(int value, int newValue)
+        {
+            Current = Head;
+            while (Current.Next != null)
+            {
+                if (Current.Next.Value == value)
+                {
+                    Node newNode = new Node(newValue);
+                    newNode.Next = Current.Next;
+                    Current.Next = newNode;
+                }
+            }
+        }
     }
 }
