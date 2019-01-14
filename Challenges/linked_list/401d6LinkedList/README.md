@@ -12,5 +12,5 @@
 Amanda Iverson provided us with starter code
 
 ## Solution
-![happyCase](../../../assets/)
-![testsPass](../../../assets/)
+![happyCase](../../../assets/CodeChall5Console.JPG)
+![testsPass](../../../assets/CodeChall5test.JPG)
