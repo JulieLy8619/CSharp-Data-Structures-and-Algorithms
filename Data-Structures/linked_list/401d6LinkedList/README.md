@@ -9,8 +9,14 @@ We were asked to start the code for linked lists. To create a linked list, and b
 
 ## Approach and Efficiency
 
+Approach was insterting a node at the beginning therefore keeing this at big O(1) for now. I think the Big O space is O(N) because we keep adding a node.
 
 ## API
+
+The current APIs of this class are: 
+- Insert
+- Includes
+- Print
 
 ## Contributors
 
