@@ -12,6 +12,7 @@ namespace _401d6LinkedList.Classes
         public Node(int value)
         {
             Value = value;
+            Next = null;
         }
     }
 }

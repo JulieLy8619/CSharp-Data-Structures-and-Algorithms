@@ -1,4 +1,6 @@
-﻿namespace _401d6LinkedList.Classes
+﻿using System;
+
+namespace _401d6LinkedList.Classes
 {
     class LList
     {
@@ -12,9 +14,9 @@
 
         public void Insert(int value)
         {
-            Node silly = new Node(value);
-            silly.Next = Head;
-            Head = silly;
+            Node node = new Node(value);
+            node.Next = Head;
+            Head = node;
         }
 
         public bool Includes(int value)
@@ -39,6 +41,14 @@
         public void Print()
         {
             // output to the console the linked list
+            Current = Head;
+            while (Current.Next != null)
+            {
+                //Console.WriteLine("NEXT" + Current.Next);
+                Console.Write(Current.Value + " -> ");
+                Current = Current.Next;
+            }
+            Console.Write(Current.Value); //last node
         }
 
 
