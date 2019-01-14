@@ -3,7 +3,7 @@ using System;
 
 namespace _401d6LinkedList
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {

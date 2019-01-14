@@ -2,15 +2,22 @@
 
 namespace _401d6LinkedList.Classes
 {
-    class LList
+    public class LList
     {
         public Node Head { get; set; }
         public Node Current { get; set; }
 
+        //constructor that I need to give it a node
         //public LList(Node node)
         //{
         //    Head = node;
         //}
+
+        //constructor if not given a node
+        public LList()
+        {
+            Head = null;
+        }
 
         /// <summary>
         /// inserts a node at the beginning of the linked list
