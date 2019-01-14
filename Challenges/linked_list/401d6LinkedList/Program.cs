@@ -23,8 +23,6 @@ namespace _401d6LinkedList
             Console.WriteLine($"Does 8 Exist?: {list.Includes(8)}");
             Console.WriteLine($"Does 18 Exist?: {list.Includes(18)}");
 
-            list.Print();
-            Console.ReadLine(); // just to stop it from auto closing
 
         }
     }
