@@ -10,6 +10,10 @@ We were asked to start the code for linked lists. To create a linked list, and b
 ## Approach and Efficiency
 
 Approach was insterting a node at the beginning therefore keeing this at big O(1) for now. I think the Big O space is O(N) because we keep adding a node.
+correct answer: 
+it is Big O(1) when inserting at beginning, changes to big O(n) when inserting anywhere aside from beginning because worst case you could have to walk through whole list to add it at end
+It is Big O(n) because it walks through all the nodes to print
+space is O(1) because we aren't adding any new linkedlist (even if added 3 nodes, its a constant so still O(1) space)
 
 ## API
 

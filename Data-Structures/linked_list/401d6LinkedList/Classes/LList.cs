@@ -60,16 +60,33 @@ namespace _401d6LinkedList.Classes
         public void Print()
         {
             // output to the console the linked list
-            Current = Head;
-            while (Current.Next != null)
+            if (Head != null)
             {
-                //Console.WriteLine("NEXT" + Current.Next);
-                Console.Write(Current.Value + " -> ");
-                Current = Current.Next;
+                Current = Head;
+                while (Current.Next != null)
+                {
+                    //Console.WriteLine("NEXT" + Current.Next);
+                    Console.Write(Current.Value + " -> ");
+                    Current = Current.Next;
+                }
+                Console.Write(Current.Value + " -> null"); //last node
             }
-            Console.Write(Current.Value); //last node
+            else
+            {
+                Console.WriteLine("The link list is empty");
+            }
         }
 
-
+        public void Append (int value)
+        {
+            //Current = Head; don't need to because we're just trying to find the end
+            while (Current.Next != null)
+            {
+                Current = Current.Next;
+            }
+            Node newNode = new Node(value);
+            Current.Next = newNode;
+            
+        }
     }
 }
