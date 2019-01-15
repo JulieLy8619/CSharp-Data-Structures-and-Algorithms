@@ -72,42 +72,41 @@ namespace linkedlist_unittesting
         }
         //print method didn't return anthing so can't test it
 
-//TA HELP:
         //tests append
-        //[Fact]
-        //public void TestAppendWorks1()
-        //{
-        //    //if I append and check it is in it then it made it in
-        //    LList list = new LList();
-        //    list.Insert(4);
-        //    list.Insert(8);
-        //    list.Insert(15);
-        //    list.Append(2);
-        //    Assert.True(list.Includes(2));
-        //}
-        //[Fact]
-        //public void TestAppendWorks2()
-        //{
-        //    //if I append and check it is in it then it made it in
-        //    LList list = new LList();
-        //    list.Insert(4);
-        //    list.Insert(8);
-        //    list.Insert(15);
-        //    list.Append(2);
-        //    list.Append(100);
-        //    Assert.True(list.Includes(4));
-        //}
-        //[Fact]
-        //public void TestAppendNotWorks()
-        //{
-        //    //if I append and check it is in it then it made it in
-        //    LList list = new LList();
-        //    list.Insert(4);
-        //    list.Insert(8);
-        //    list.Insert(15);
-        //    list.Append(2);
-        //    Assert.False(list.Includes(10));
-        //}
+        [Fact]
+        public void TestAppendWorks1()
+        {
+            //if I append and check it is in it then it made it in
+            LList list = new LList();
+            list.Insert(4);
+            list.Insert(8);
+            list.Insert(15);
+            list.Append(2);
+            Assert.True(list.Includes(2));
+        }
+        [Fact]
+        public void TestAppendWorks2()
+        {
+            //if I append and check it is in it then it made it in
+            LList list = new LList();
+            list.Insert(4);
+            list.Insert(8);
+            list.Insert(15);
+            list.Append(2);
+            list.Append(100);
+            Assert.True(list.Includes(4));
+        }
+        [Fact]
+        public void TestAppendNotWorks()
+        {
+            //if I append and check it is in it then it made it in
+            LList list = new LList();
+            list.Insert(4);
+            list.Insert(8);
+            list.Insert(15);
+            list.Append(2);
+            Assert.False(list.Includes(10));
+        }
 
 
         //test insertbefore
@@ -138,7 +137,6 @@ namespace linkedlist_unittesting
         public void TestInsertBeforeNotWorks()
         {
             //if I insertbefore and check it is in it then it made it in
-//TA HELP HERE TOO: I don't think this is the correct way to check it
             LList list = new LList();
             list.Insert(4);
             list.Insert(8);
