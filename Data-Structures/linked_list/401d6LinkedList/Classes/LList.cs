@@ -13,7 +13,9 @@ namespace _401d6LinkedList.Classes
         //    Head = node;
         //}
 
-        //constructor if not given a node
+        /// <summary>
+        /// constructor if not given a node
+        /// </summary>
         public LList()
         {
             Head = null;
@@ -38,20 +40,28 @@ namespace _401d6LinkedList.Classes
         public bool Includes(int value)
         {
             Current = Head;
-            while (Current.Next != null)
+            if (Head == null)
             {
+                Console.WriteLine("The linked list is Null");
+                return false;
+            }
+            else
+            {
+                while (Current.Next != null)
+                {
+                    if (Current.Value == value)
+                    {
+                        return true;
+                    }
+                    Current = Current.Next;
+                }
                 if (Current.Value == value)
                 {
                     return true;
                 }
-                Current = Current.Next;
-            }
-            if (Current.Value == value)
-            {
-                return true;
-            }
 
-            return false;
+                return false;
+            }
         }
 
         /// <summary>
@@ -91,6 +101,7 @@ namespace _401d6LinkedList.Classes
 
         public void InsertBefore(int value, int newValue)
         {
+            bool inLList = false;
             //might still need to add if value isn't in list
             Current = Head;
             if (Head == null) 
@@ -100,6 +111,7 @@ namespace _401d6LinkedList.Classes
             else if (Current.Value == value)
             {
                 Insert(newValue);
+                inLList = true;
                 return; //to exit because I don't need to go through the rest of the list
             }
             else
@@ -112,12 +124,18 @@ namespace _401d6LinkedList.Classes
                         Node newNode = new Node(newValue);
                         newNode.Next = Current.Next;
                         Current.Next = newNode;
+                        inLList = true;
                         return;//to exit because I don't need to go through the rest of the list
                     }
                     else
                     {
                         Current = Current.Next;
                     }
+                }
+                if (inLList == false)//if value isn't in list
+                {
+                    Console.WriteLine();
+                    Console.WriteLine($"{value} isn't in the list");
                 }
             }
         }

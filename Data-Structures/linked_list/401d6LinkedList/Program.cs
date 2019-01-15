@@ -24,6 +24,13 @@ namespace _401d6LinkedList
             Console.WriteLine($"Does 18 Exist?: {list.Includes(18)}");
 
             list.Print();
+
+            list.InsertBefore(99, 8);
+            Console.WriteLine();
+            list.Print();
+            list.InsertBefore(8, 7);
+            Console.WriteLine();
+            list.Print();
             Console.ReadLine(); // to stop it from auto closing
 
         }
