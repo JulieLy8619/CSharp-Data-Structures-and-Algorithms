@@ -21,6 +21,7 @@ namespace _401d6LinkedList
             Console.WriteLine("Empty list");
             list.InsertBefore(5,10);
             list.InsertAfter(5,10);
+            list.Append(100);
 
             Console.WriteLine("added 4 8 15 list");
             list.Insert(4);

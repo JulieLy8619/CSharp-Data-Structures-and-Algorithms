@@ -90,13 +90,19 @@ namespace _401d6LinkedList.Classes
         public void Append (int value)
         {
             //Current = Head; don't need to because we're just trying to find the end
-            while (Current.Next != null)
+            if (Head == null)
             {
-                Current = Current.Next;
+                Console.WriteLine("The linked list is Null");
             }
-            Node newNode = new Node(value);
-            Current.Next = newNode;
-            
+            else
+            {
+                while (Current.Next != null)
+                {
+                    Current = Current.Next;
+                }
+                Node newNode = new Node(value);
+                Current.Next = newNode;
+            }
         }
 
         public void InsertBefore(int value, int newValue)
