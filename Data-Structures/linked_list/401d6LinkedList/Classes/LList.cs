@@ -13,7 +13,9 @@ namespace _401d6LinkedList.Classes
         //    Head = node;
         //}
 
-        //constructor if not given a node
+        /// <summary>
+        /// constructor if not given a node
+        /// </summary>
         public LList()
         {
             Head = null;
@@ -38,20 +40,28 @@ namespace _401d6LinkedList.Classes
         public bool Includes(int value)
         {
             Current = Head;
-            while (Current.Next != null)
+            if (Head == null)
             {
+                Console.WriteLine("The linked list is Null");
+                return false;
+            }
+            else
+            {
+                while (Current.Next != null)
+                {
+                    if (Current.Value == value)
+                    {
+                        return true;
+                    }
+                    Current = Current.Next;
+                }
                 if (Current.Value == value)
                 {
                     return true;
                 }
-                Current = Current.Next;
-            }
-            if (Current.Value == value)
-            {
-                return true;
-            }
 
-            return false;
+                return false;
+            }
         }
 
         /// <summary>
@@ -60,16 +70,128 @@ namespace _401d6LinkedList.Classes
         public void Print()
         {
             // output to the console the linked list
-            Current = Head;
-            while (Current.Next != null)
+            if (Head != null)
             {
-                //Console.WriteLine("NEXT" + Current.Next);
-                Console.Write(Current.Value + " -> ");
-                Current = Current.Next;
+                Current = Head;
+                while (Current.Next != null)
+                {
+                    //Console.WriteLine("NEXT" + Current.Next);
+                    Console.Write(Current.Value + " -> ");
+                    Current = Current.Next;
+                }
+                Console.Write(Current.Value + " -> null"); //last node
             }
-            Console.Write(Current.Value); //last node
+            else
+            {
+                Console.WriteLine("The link list is empty");
+            }
         }
 
+        public void Append (int value)
+        {
+            //Current = Head; don't need to because we're just trying to find the end
+            if (Head == null)
+            {
+                Console.WriteLine("The linked list is Null");
+            }
+            else
+            {
+                while (Current.Next != null)
+                {
+                    Current = Current.Next;
+                }
+                Node newNode = new Node(value);
+                Current.Next = newNode;
+            }
+        }
 
+        public void InsertBefore(int value, int newValue)
+        {
+            bool inLList = false;
+            Current = Head;
+            if (Head == null) 
+            {
+                Console.WriteLine("The linked list is Null");
+            }
+            else if (Current.Value == value)
+            {
+                Insert(newValue);
+                inLList = true;
+                return; //to exit because I don't need to go through the rest of the list
+            }
+            else
+            {
+
+                while (Current.Next != null)
+                {
+                    if (Current.Next.Value == value)
+                    {
+                        Node newNode = new Node(newValue);
+                        newNode.Next = Current.Next;
+                        Current.Next = newNode;
+                        inLList = true;
+                        return;//to exit because I don't need to go through the rest of the list
+                    }
+                    else
+                    {
+                        Current = Current.Next;
+                    }
+                }
+                if (inLList == false)//if value isn't in list
+                {
+                    Console.WriteLine();
+                    Console.WriteLine($"{value} isn't in the list");
+                }
+            }
+        }
+
+        public void InsertAfter(int value, int newValue)
+        {
+            bool inLList = false;
+            Current = Head;
+            if (Head == null)
+            {
+                Console.WriteLine("The linked list is Null");
+            }
+            //else if (Current.Value == value)
+            //{
+            //    Insert(newValue);
+            //    inLList = true;
+            //    return; //to exit because I don't need to go through the rest of the list
+            //}
+            else
+            {
+
+                while (Current.Next != null)
+                {
+                    if (Current.Value == value)
+                    {
+                        Node newNode = new Node(newValue);
+                        newNode.Next = Current.Next;
+                        Current.Next = newNode;
+                        inLList = true;
+                        return;//to exit because I don't need to go through the rest of the list
+                    }
+                    else
+                    {
+                        Current = Current.Next;
+                    }
+                }
+                if (Current.Value == value)//it was the last one in the list
+                {
+                    Node newNode = new Node(newValue);
+                    newNode.Next = Current.Next;
+                    Current.Next = newNode;
+                    inLList = true;
+                    return;//to exit because I don't need to go through the rest of the list
+                }
+                else if (inLList == false)//if value isn't in list
+                {
+                    Console.WriteLine();
+                    Console.WriteLine($"{value} isn't in the list");
+                }
+            }
+        }
     }
 }
+

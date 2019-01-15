@@ -8,7 +8,7 @@
 
 3. [Challenge: Array Binary Search](Challenges/BinarySearch)
 
-4. [Challenge: Linked List](Challenges/)
+4. [Challenge: Linked List](Data-Structures/linked_list)
 
 5. [Challenge 5](#)
 
