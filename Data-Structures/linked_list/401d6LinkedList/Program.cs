@@ -68,6 +68,11 @@ namespace _401d6LinkedList
 
             list.Print();
             Console.WriteLine();
+
+            Console.WriteLine("test append");
+            list.Append(500);
+            list.Print();
+            Console.WriteLine();
             Console.ReadLine(); // to stop it from auto closing
 
         }
