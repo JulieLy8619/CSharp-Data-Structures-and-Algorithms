@@ -89,7 +89,7 @@ namespace _401d6LinkedList.Classes
 
         public void Append (int value)
         {
-            //Current = Head; don't need to because we're just trying to find the end
+            Current = Head; //don't need to because we're just trying to find the end
             if (Head == null)
             {
                 Console.WriteLine("The linked list is Null");

@@ -30,5 +30,8 @@ The current APIs of this class are:
 Amanda Iverson provided us with starter code.
 
 ## Solution
-![happyCase](../../../assets/CodeChall5Console.JPG)
-![testsPass](../../../assets/CodeChall5test.JPG)
+![happyCaseCC5](../../../assets/CodeChall5Console.JPG)
+![testsPassCC5](../../../assets/CodeChall5test.JPG)
+![happyCaseCC6](../../../assets/CodeChall6Console.JPG)
+![testsPassCC6](../../../assets/CodeChall6test.JPG)
+
