@@ -102,7 +102,6 @@ namespace _401d6LinkedList.Classes
         public void InsertBefore(int value, int newValue)
         {
             bool inLList = false;
-            //might still need to add if value isn't in list
             Current = Head;
             if (Head == null) 
             {
@@ -133,6 +132,54 @@ namespace _401d6LinkedList.Classes
                     }
                 }
                 if (inLList == false)//if value isn't in list
+                {
+                    Console.WriteLine();
+                    Console.WriteLine($"{value} isn't in the list");
+                }
+            }
+        }
+
+        public void InsertAfter(int value, int newValue)
+        {
+            bool inLList = false;
+            Current = Head;
+            if (Head == null)
+            {
+                Console.WriteLine("The linked list is Null");
+            }
+            //else if (Current.Value == value)
+            //{
+            //    Insert(newValue);
+            //    inLList = true;
+            //    return; //to exit because I don't need to go through the rest of the list
+            //}
+            else
+            {
+
+                while (Current.Next != null)
+                {
+                    if (Current.Value == value)
+                    {
+                        Node newNode = new Node(newValue);
+                        newNode.Next = Current.Next;
+                        Current.Next = newNode;
+                        inLList = true;
+                        return;//to exit because I don't need to go through the rest of the list
+                    }
+                    else
+                    {
+                        Current = Current.Next;
+                    }
+                }
+                if (Current.Value == value)//it was the last one in the list
+                {
+                    Node newNode = new Node(newValue);
+                    newNode.Next = Current.Next;
+                    Current.Next = newNode;
+                    inLList = true;
+                    return;//to exit because I don't need to go through the rest of the list
+                }
+                else if (inLList == false)//if value isn't in list
                 {
                     Console.WriteLine();
                     Console.WriteLine($"{value} isn't in the list");
