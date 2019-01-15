@@ -32,6 +32,7 @@ namespace _401d6LinkedList
             //Console.WriteLine($"Does 18 Exist?: {list.Includes(18)}");
 
             list.Print();
+            Console.WriteLine();
 
             Console.WriteLine("insert before at begining");
             list.InsertBefore(15, 16);
@@ -73,6 +74,7 @@ namespace _401d6LinkedList
             Console.WriteLine("test append");
             list.Append(500);
             list.Print();
+            Console.WriteLine($"Does 500 Exist?: {list.Includes(500)}");
             Console.WriteLine();
             Console.ReadLine(); // to stop it from auto closing
 
