@@ -12,7 +12,7 @@ This would give us Big O(1) for space because we created two variables.
 
 # Solution
 WhiteBoard
-![whiteboardcc07](../../../assets/CodeChall7WB1)
+![whiteboardcc07](../../../assets/CodeChall7WB1.jpg)
 <!--![whiteboardcc07](../../../assets/CodeChall7WB2) if I want to use my insert idea-->
 Console output
 ![consoleExample](../../../assets/CodeChall7ImageConsole.JPG)
