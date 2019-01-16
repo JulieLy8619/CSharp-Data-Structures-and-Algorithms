@@ -13,4 +13,14 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\linkedlistKFromEnd\ll_kth_from_end\ll_kth_from_end.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="401d6LinkedList">
+      <HintPath>..\..\Data-Structures\linked_list\401d6LinkedList\bin\Debug\netcoreapp2.1\401d6LinkedList.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

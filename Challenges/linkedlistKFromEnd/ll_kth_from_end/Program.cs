@@ -1,5 +1,4 @@
 ﻿using System;
-using _401d6LinkedList;
 using _401d6LinkedList.Classes;
 
 namespace ll_kth_from_end
@@ -61,16 +60,14 @@ namespace ll_kth_from_end
             list.Print();
             Console.WriteLine();
 
-
             //test if k is not a num, nvm don't need to make this test, won't compile if not int
-
 
             Console.ReadLine(); //to stop it from auto exiting
 
         }
 
         //Per TA Philip, he said someone messed with the documentaion and I can take in 2 params (list and K)
-        static int KthFromEnd(LList list, int keyNum)
+        public static int KthFromEnd(LList list, int keyNum)
         {
             if (keyNum < 0)
             {
@@ -111,14 +108,10 @@ namespace ll_kth_from_end
                     {
                         //reset to head and rewalk to k from end length
                         list.Current = list.Head;
-                        //Console.WriteLine("head value" + list.Head.Value);
-                        //Console.WriteLine("counter for K " + counterForK);
                         for (int i = 0; i < (counterForK-1); i++)
                         {
-                            //Console.WriteLine("list current value in FOR loop " + list.Current.Value);
                             list.Current = list.Current.Next;
                         }
-                        //Console.WriteLine("return from FOR list");
                         return list.Current.Value;
                     }
                 }
