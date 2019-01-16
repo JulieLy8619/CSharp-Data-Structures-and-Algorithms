@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ll_kth_from_end", "ll_kth_from_end\ll_kth_from_end.csproj", "{57889ED8-BE52-4DF9-B9CB-27987A94F2E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ll_kth_end-unittesting", "..\ll_kth_end-unittesting\ll_kth_end-unittesting.csproj", "{5BD8F7A0-A08F-48BE-9D36-DE349F2D2FA2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57889ED8-BE52-4DF9-B9CB-27987A94F2E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57889ED8-BE52-4DF9-B9CB-27987A94F2E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57889ED8-BE52-4DF9-B9CB-27987A94F2E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57889ED8-BE52-4DF9-B9CB-27987A94F2E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BD8F7A0-A08F-48BE-9D36-DE349F2D2FA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BD8F7A0-A08F-48BE-9D36-DE349F2D2FA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BD8F7A0-A08F-48BE-9D36-DE349F2D2FA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BD8F7A0-A08F-48BE-9D36-DE349F2D2FA2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7906AA86-2FC3-491A-85DD-BAD9140A04CF}
+	EndGlobalSection
+EndGlobal
