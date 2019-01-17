@@ -15,3 +15,5 @@ I also included closer up photos of the whiteboard because I felt it was tiny
 # Constributors
 Partner: Xia Liu
 
+
+
