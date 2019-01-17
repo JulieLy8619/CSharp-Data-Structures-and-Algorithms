@@ -4,13 +4,13 @@ We were tasked with merging two linked lists together in a zipper style. (like o
 
 # Solution
 Whiteboard
-![wholeWB](../../../assets/)
+![wholeWB](../../../assets/CodeChall8WB1.jpg)
 
 (I also included closer up photos of the whiteboard because I felt it was tiny)
-![WBCloseUp1](../../../assets/CodeChall8WB1.jpg)
-![WBCloseUp2](../../../assets/CodeChall8WB2.jpg)
-![WBCloseUp3](../../../assets/CodeChall8WB3.jpg)
-![WBCloseUp4](../../../assets/CodeChall8WB4.jpg)
-![WBCloseUp5](../../../assets/CodeChall8WB5.jpg)
+![WBCloseUp1](../../../assets/CodeChall8WB2.jpg)
+![WBCloseUp2](../../../assets/CodeChall8WB3.jpg)
+![WBCloseUp3](../../../assets/CodeChall8WB4.jpg)
+![WBCloseUp4](../../../assets/CodeChall8WB5.jpg)
+
 
 
