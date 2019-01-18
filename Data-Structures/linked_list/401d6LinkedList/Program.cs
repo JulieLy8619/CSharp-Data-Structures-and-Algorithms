@@ -13,11 +13,9 @@ namespace _401d6LinkedList
 
         static void NodeExample()
         {
-            //Node node = new Node(8);
-            //Console.WriteLine(node.Value);
             LList list = new LList();
 
-            //tests linklist is empty
+            //tests null linklist
             Console.WriteLine("Empty list");
             list.InsertBefore(5,10);
             list.InsertAfter(5,10);
@@ -28,8 +26,8 @@ namespace _401d6LinkedList
             list.Insert(8);
             list.Insert(15);
 
-            //Console.WriteLine($"Does 8 Exist?: {list.Includes(8)}");
-            //Console.WriteLine($"Does 18 Exist?: {list.Includes(18)}");
+            Console.WriteLine($"Does 8 Exist?: {list.Includes(8)}");
+            Console.WriteLine($"Does 18 Exist?: {list.Includes(18)}");
 
             list.Print();
             Console.WriteLine();
