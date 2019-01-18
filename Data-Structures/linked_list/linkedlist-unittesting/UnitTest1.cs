@@ -99,7 +99,7 @@ namespace linkedlist_unittesting
         [Fact]
         public void TestAppendNotWorks()
         {
-            //if I append and check it is in it then it made it in
+            //i don't think this is how I should have tested it wasn't appended...because I didn't try to append it
             LList list = new LList();
             list.Insert(4);
             list.Insert(8);
@@ -113,30 +113,49 @@ namespace linkedlist_unittesting
         [Fact]
         public void TestInsertBeforeWorks()
         {
-            //if I insertbefore and check it is in it then it made it in
             LList list = new LList();
             list.Insert(4);
             list.Insert(8);
             list.Insert(15);
             list.InsertBefore(8,2);
-            Assert.True(list.Includes(2));
+            int[] arr = new int[4];
+            list.Current = list.Head;
+            int counter = 0;
+            do
+            {
+                arr[counter] = list.Current.Value;
+                list.Current = list.Current.Next;
+                counter++;
+            } while (list.Current.Next != null);
+            int testVal = arr[1]; //because it should be 15 2 8 4
+            Assert.Equal(2, testVal);
         }
         [Fact]
         public void TestInsertBeforeWorks2()
         {
-            //if I insertbefore and check it is in it then it made it in
             LList list = new LList();
             list.Insert(4);
             list.Insert(8);
             list.Insert(15);
             list.InsertBefore(8, 2);
             list.InsertBefore(15, 9);
-            Assert.True(list.Includes(9));
+            int[] arr = new int[4];
+            list.Current = list.Head;
+            int counter = 0;
+            do
+            {
+                arr[counter] = list.Current.Value;
+                list.Current = list.Current.Next;
+                counter++;
+            } while (list.Current.Next != null);
+            int testVal = arr[0]; //because it should be 9 15 2 8 4
+            Assert.Equal(9, testVal);
+
         }
         [Fact]
         public void TestInsertBeforeNotWorks()
         {
-            //if I insertbefore and check it is in it then it made it in
+            //pretty sure this isn't right because I didn't even try to insert 9
             LList list = new LList();
             list.Insert(4);
             list.Insert(8);
@@ -149,13 +168,22 @@ namespace linkedlist_unittesting
         [Fact]
         public void TestInsertAfterWorks()
         {
-            //if I insertbefore and check it is in it then it made it in
             LList list = new LList();
             list.Insert(4);
             list.Insert(8);
             list.Insert(15);
             list.InsertAfter(8, 2);
-            Assert.True(list.Includes(2));
+            int[] arr = new int[4];
+            list.Current = list.Head;
+            int counter = 0;
+            do
+            {
+                arr[counter] = list.Current.Value;
+                list.Current = list.Current.Next;
+                counter++;
+            } while (list.Current.Next != null);
+            int testVal = arr[2]; //because it should be 15 8 2 4
+            Assert.Equal(2, testVal);
         }
         [Fact]
         public void TestInsertAfterWorks2()
@@ -167,13 +195,22 @@ namespace linkedlist_unittesting
             list.Insert(15);
             list.InsertAfter(8, 2);
             list.InsertAfter(15, 9);
-            Assert.True(list.Includes(9));
+            int[] arr = new int[4];
+            list.Current = list.Head;
+            int counter = 0;
+            do
+            {
+                arr[counter] = list.Current.Value;
+                list.Current = list.Current.Next;
+                counter++;
+            } while (list.Current.Next != null);
+            int testVal = arr[1]; //because it should be 15 9 8 2 4
+            Assert.Equal(9, testVal);
         }
         [Fact]
         public void TestInsertAfterNotWorks()
         {
-            //if I insertbefore and check it is in it then it made it in
-//TA HELP HERE TOO: I don't think this is the correct way to check it
+            //I don't think this is the correct way to check it
             LList list = new LList();
             list.Insert(4);
             list.Insert(8);
