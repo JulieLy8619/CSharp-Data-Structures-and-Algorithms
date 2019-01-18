@@ -7,11 +7,6 @@ namespace _401d6LinkedList.Classes
         public Node Head { get; set; }
         public Node Current { get; set; }
 
-        //constructor that I need to give it a node
-        //public LList(Node node)
-        //{
-        //    Head = node;
-        //}
 
         /// <summary>
         /// constructor if not given a node
@@ -87,6 +82,10 @@ namespace _401d6LinkedList.Classes
             }
         }
 
+        /// <summary>
+        /// This will append a new node to the end of the linked list
+        /// </summary>
+        /// <param name="value">Value of the new node</param>
         public void Append (int value)
         {
             Current = Head; //don't need to because we're just trying to find the end
@@ -105,6 +104,11 @@ namespace _401d6LinkedList.Classes
             }
         }
 
+        /// <summary>
+        /// This will insert a new node before a given node value
+        /// </summary>
+        /// <param name="value">the node you would like anew node inserted before</param>
+        /// <param name="newValue">the value of the new node</param>
         public void InsertBefore(int value, int newValue)
         {
             bool inLList = false;
@@ -145,6 +149,11 @@ namespace _401d6LinkedList.Classes
             }
         }
 
+        /// <summary>
+        /// This will insert a new node after a given node value
+        /// </summary>
+        /// <param name="value">the node you would like a new node inserted after</param>
+        /// <param name="newValue">the value of the new node</param>
         public void InsertAfter(int value, int newValue)
         {
             bool inLList = false;
@@ -153,12 +162,6 @@ namespace _401d6LinkedList.Classes
             {
                 Console.WriteLine("The linked list is Null");
             }
-            //else if (Current.Value == value)
-            //{
-            //    Insert(newValue);
-            //    inLList = true;
-            //    return; //to exit because I don't need to go through the rest of the list
-            //}
             else
             {
 
