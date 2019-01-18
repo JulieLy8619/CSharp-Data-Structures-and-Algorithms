@@ -195,13 +195,22 @@ namespace linkedlist_unittesting
             list.Insert(15);
             list.InsertAfter(8, 2);
             list.InsertAfter(15, 9);
-            Assert.True(list.Includes(9));
+            int[] arr = new int[4];
+            list.Current = list.Head;
+            int counter = 0;
+            do
+            {
+                arr[counter] = list.Current.Value;
+                list.Current = list.Current.Next;
+                counter++;
+            } while (list.Current.Next != null);
+            int testVal = arr[1]; //because it should be 15 9 8 2 4
+            Assert.Equal(9, testVal);
         }
         [Fact]
         public void TestInsertAfterNotWorks()
         {
-            //if I insertbefore and check it is in it then it made it in
-//TA HELP HERE TOO: I don't think this is the correct way to check it
+            //I don't think this is the correct way to check it
             LList list = new LList();
             list.Insert(4);
             list.Insert(8);
