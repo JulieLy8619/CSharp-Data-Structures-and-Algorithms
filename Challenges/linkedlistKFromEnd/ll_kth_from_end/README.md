@@ -17,6 +17,8 @@ WhiteBoard
 Console output
 ![consoleExample](../../../assets/CodeChall7ImageConsole.JPG)
 ![tests](../../../assets/CodeChall7test.JPG)
+added a few more test
+![tests](../../../assets/CodeChall7testRedo.JPG)
 
 
 # Contributions
