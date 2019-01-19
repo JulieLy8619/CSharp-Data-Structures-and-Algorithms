@@ -67,6 +67,12 @@ namespace ll_kth_from_end
         }
 
         //Per TA Philip, he said someone messed with the documentaion and I can take in 2 params (list and K)
+        /// <summary>
+        /// This will find the value of the Kth node from the end
+        /// </summary>
+        /// <param name="list">The linked list</param>
+        /// <param name="keyNum">the kth value from the ending</param>
+        /// <returns>the Node's value that is Kth from the end</returns>
         public static int KthFromEnd(LList list, int keyNum)
         {
             if (keyNum < 0)
@@ -83,7 +89,7 @@ namespace ll_kth_from_end
                 if (list.Head == null)
                 {
                     Console.WriteLine("The linked list is Null");
-                    Console.WriteLine("return from null IF");
+                    //Console.WriteLine("return from null IF");
                     return 0; //won't let me return null
                 }
                 else
@@ -101,7 +107,7 @@ namespace ll_kth_from_end
                     if (counterForK < 0)
                     {
                         Console.WriteLine($"The Linked List isn't longer than {keyNum}");
-                        Console.WriteLine("return from key num too big IF");
+                        //Console.WriteLine("return from key num too big IF");
                         return 0; //won't let me return null
                     }
                     else

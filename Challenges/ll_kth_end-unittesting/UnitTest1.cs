@@ -8,7 +8,7 @@ namespace ll_kth_end_unittesting
     public class UnitTest1
     {
         [Fact]
-        public void Test1()
+        public void TestKthsFromEndHappyCase()
         {
             LList list = new LList();
             list.Insert(4);
@@ -22,7 +22,7 @@ namespace ll_kth_end_unittesting
         }
 
         [Fact]
-        public void Test2()
+        public void TestNotReturnOtherNumberThatIsKthFromEnd()
         {
             LList list = new LList();
             list.Insert(4);
@@ -35,17 +35,33 @@ namespace ll_kth_end_unittesting
             Assert.NotEqual(15, testK2);
         }
         [Fact]
-        public void Test3()
+        public void TestNullLinkListKthFromEnd()
+        {
+            LList list = new LList();
+            int testK3 = Program.KthFromEnd(list, 3);
+            Assert.Equal(0, testK3); //because it should have returns 0 if it was a Null list
+        }
+
+        [Fact]
+        public void TestOutOfScopeKthFromEnd()
         {
             LList list = new LList();
             list.Insert(4);
             list.Insert(8);
             list.Insert(15);
-            list.Insert(20);
-            list.Insert(25);
-            list.Insert(50);
-            int testK3 = Program.KthFromEnd(list, 0);
-            Assert.Equal(4, testK3);
+            int testK4 = Program.KthFromEnd(list, 10);
+            Assert.Equal(0, testK4); //because it should have returns 0 if K was longer than LinkedList
+        }
+
+        [Fact]
+        public void TestNegNumKthFromEnd()
+        {
+            LList list = new LList();
+            list.Insert(4);
+            list.Insert(8);
+            list.Insert(15);
+            int testK4 = Program.KthFromEnd(list, -5);
+            Assert.Equal(0, testK4); //because it should have returns 0 if K was neg number
         }
     }
 }
