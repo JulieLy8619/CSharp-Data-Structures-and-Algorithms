@@ -50,6 +50,13 @@ namespace ll_Merge
             list4.Insert(75);
             list4.Insert(65);
 
+            Console.WriteLine("list3 ");
+            list3.Print();
+            Console.WriteLine();
+            Console.WriteLine("list4 ");
+            list4.Print();
+            Console.WriteLine();
+
             LList newLL2 = Merge(list3, list4); //when list 1 is short than list 2
             //should be 100 95 90 85 75 65
             Console.WriteLine("merge ll3 and ll4");
@@ -65,6 +72,13 @@ namespace ll_Merge
 
             list6.Insert(95);
             list6.Insert(85);
+
+            Console.WriteLine("list5 ");
+            list5.Print();
+            Console.WriteLine();
+            Console.WriteLine("list6 ");
+            list6.Print();
+            Console.WriteLine();
 
             LList newLL3 = Merge(list5, list6); //when list 2 is short than list 1
             //should be 100 95 90 85 80 70
@@ -105,26 +119,29 @@ namespace ll_Merge
                 do
                 {
                     tempNodePointer = LL2.Current.Next;
-                    Console.WriteLine("tempNodePointer " + tempNodePointer.Value);
+                    //Console.WriteLine("tempNodePointer " + tempNodePointer.Value);
                     LL2.Current.Next = LL1.Current.Next;
-                    Console.WriteLine("LL2.Current.Next " + LL2.Current.Next.Value);
+                    //Console.WriteLine("LL2.Current.Next " + LL2.Current.Next.Value);
                     LL1.Current.Next = LL2.Current;
-                    Console.WriteLine("LL1.Current.Next " + LL1.Current.Next.Value);
+                    //Console.WriteLine("LL1.Current.Next " + LL1.Current.Next.Value);
                     LL1.Current = LL2.Current.Next;
-                    Console.WriteLine("LL1.Current " + LL1.Current.Value);
+                    //Console.WriteLine("LL1.Current " + LL1.Current.Value);
                     LL2.Current = tempNodePointer;
-                    Console.WriteLine("LL2.Current " + LL2.Current.Value);
-                    Console.WriteLine("=====end of loop =======");
+                    //Console.WriteLine("LL2.Current " + LL2.Current.Value);
+                    //Console.WriteLine("=====end of loop =======");
                 } while (LL1.Current.Next != null && LL2.Current.Next != null);
 
                 if (LL1.Current.Next != null && LL2.Current.Next == null)
                 {
-                    Console.WriteLine("in ll1 curr next not null and ll2 curr next null");
+                    //Console.WriteLine("in ll1 curr next not null and ll2 curr next null");
+                    LL2.Current.Next = LL1.Current.Next;
+                    LL1.Current.Next = LL2.Current;
+                    LL1.Current = LL2.Current.Next;
                     return LL1;
                 }
                 else if (LL1.Current.Next == null && LL2.Current.Next != null)
                 {
-                    Console.WriteLine("in ll1 curr next null and ll2 curr next not null");
+                    //Console.WriteLine("in ll1 curr next null and ll2 curr next not null");
                     LL1.Current.Next = LL2.Current;
                     return LL1;
                 }
