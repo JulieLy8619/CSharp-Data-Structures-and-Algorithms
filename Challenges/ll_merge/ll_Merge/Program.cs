@@ -37,6 +37,7 @@ namespace ll_Merge
             newLL = Merge(list1, list2); //should return 1 2 3 4 5 6 7 8 null (happy case)
             Console.WriteLine("merge ll1 and ll2");
             newLL.Print();
+            Console.WriteLine();
             Console.WriteLine("==========");
             LList list3 = new LList();
             LList list4 = new LList();
@@ -61,6 +62,7 @@ namespace ll_Merge
             //should be 100 95 90 85 75 65
             Console.WriteLine("merge ll3 and ll4");
             newLL2.Print();
+            Console.WriteLine();
             Console.WriteLine("==========");
             LList list5 = new LList();
             LList list6 = new LList();
