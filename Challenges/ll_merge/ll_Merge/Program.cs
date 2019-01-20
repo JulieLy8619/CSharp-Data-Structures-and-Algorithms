@@ -114,26 +114,18 @@ namespace ll_Merge
             }
             else 
             {
-                //Console.WriteLine("else");
                 Node tempNodePointer = LL1.Head;
                 do
                 {
                     tempNodePointer = LL2.Current.Next;
-                    //Console.WriteLine("tempNodePointer " + tempNodePointer.Value);
                     LL2.Current.Next = LL1.Current.Next;
-                    //Console.WriteLine("LL2.Current.Next " + LL2.Current.Next.Value);
                     LL1.Current.Next = LL2.Current;
-                    //Console.WriteLine("LL1.Current.Next " + LL1.Current.Next.Value);
                     LL1.Current = LL2.Current.Next;
-                    //Console.WriteLine("LL1.Current " + LL1.Current.Value);
                     LL2.Current = tempNodePointer;
-                    //Console.WriteLine("LL2.Current " + LL2.Current.Value);
-                    //Console.WriteLine("=====end of loop =======");
                 } while (LL1.Current.Next != null && LL2.Current.Next != null);
 
                 if (LL1.Current.Next != null && LL2.Current.Next == null)
                 {
-                    //Console.WriteLine("in ll1 curr next not null and ll2 curr next null");
                     LL2.Current.Next = LL1.Current.Next;
                     LL1.Current.Next = LL2.Current;
                     LL1.Current = LL2.Current.Next;
@@ -141,7 +133,6 @@ namespace ll_Merge
                 }
                 else if (LL1.Current.Next == null && LL2.Current.Next != null)
                 {
-                    //Console.WriteLine("in ll1 curr next null and ll2 curr next not null");
                     LL1.Current.Next = LL2.Current;
                     return LL1;
                 }
