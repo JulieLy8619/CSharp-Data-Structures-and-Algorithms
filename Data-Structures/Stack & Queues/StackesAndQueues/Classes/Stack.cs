@@ -39,10 +39,19 @@ namespace StackesAndQueues.Classes
         /// <returns>the top node</returns>
         public Node Pop()
         {
-            Node tempNode = Top;
-            Top = Top.Next;
-            tempNode.Next = null;
-            return tempNode;
+            //should add check for if trying to pop from a null stack
+            if (Top == null)
+            {
+                Console.WriteLine("The stack is empty");
+                return null;
+            }
+            else
+            {
+                Node tempNode = Top;
+                Top = Top.Next;
+                tempNode.Next = null;
+                return tempNode;
+            }
         }
 
         /// <summary>

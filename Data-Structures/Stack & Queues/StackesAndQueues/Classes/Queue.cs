@@ -42,10 +42,18 @@ namespace StackesAndQueues.Classes
         /// <returns>the first node in the queue</returns>
         public Node Dequeue()
         {
-            Node temp = Front;
-            Front = Front.Next;
-            temp.Next = null;
-            return temp;
+            //should add check if trying to dequeue from an empty queue
+            if (Front == null)
+            {
+                return null;
+            }
+            else
+            {
+                Node temp = Front;
+                Front = Front.Next;
+                temp.Next = null;
+                return temp;
+            }
         }
 
         /// <summary>
