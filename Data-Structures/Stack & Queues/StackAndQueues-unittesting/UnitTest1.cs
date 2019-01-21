@@ -103,62 +103,96 @@ namespace StackAndQueues_unittesting
         public void TestQueueEnqueue1()
         {
             Node testNode10 = new Node(5);
-            Queue testQueue = new Queue(testNode10);
-            testQueue.Enqueue(100);
-            Assert.Equal(100, testQueue.Rear.Value);
+            Queue testQueue1 = new Queue(testNode10);
+            testQueue1.Enqueue(100);
+            Assert.Equal(100, testQueue1.Rear.Value);
         }
         [Fact]
         public void TestQueueEnqueue2()
         {
-            Node testNode10 = new Node(5);
-            Queue testQueue = new Queue(testNode10);
-            testQueue.Enqueue(100);
-            testQueue.Enqueue(200);
-            testQueue.Enqueue(300);
-            testQueue.Enqueue(400);
-            Assert.Equal(400, testQueue.Rear.Value);
+            Node testNode11 = new Node(5);
+            Queue testQueue2 = new Queue(testNode11);
+            testQueue2.Enqueue(100);
+            testQueue2.Enqueue(200);
+            testQueue2.Enqueue(300);
+            testQueue2.Enqueue(400);
+            Assert.Equal(400, testQueue2.Rear.Value);
 
         }
         [Fact]
         public void TestQueueEnqueue3()
         {
-            Queue testQueue = new Queue();
-            Node rearNode3 = testQueue.Peek();
-            Assert.Null(rearNode3);
+            Queue testQueue3 = new Queue();
+            Assert.Null(testQueue3.Rear);
         }
 
-        ////queues Dequeue
-        //[Fact]
-        //public void TestQueueDequeue1()
-        //{
+        //queues Dequeue
+        [Fact]
+        public void TestQueueDequeue1()
+        {
+            Node testNode12 = new Node(5);
+            Queue testQueue4 = new Queue(testNode12);
+            testQueue4.Enqueue(100);
+            testQueue4.Enqueue(200);
+            testQueue4.Enqueue(300);
+            testQueue4.Enqueue(400);
+            testQueue4.Dequeue(); //knocks off 5
+            testQueue4.Dequeue(); //knocks off 100
+            Node frontNode1 = testQueue4.Peek();
+            Assert.Equal(200, frontNode1.Value);
+        }
+        [Fact]
+        public void TestQueueDequeue2()
+        {
+            Node testNode13 = new Node(5);
+            Queue testQueue5 = new Queue(testNode13);
+            testQueue5.Enqueue(100);
+            testQueue5.Enqueue(200);
+            testQueue5.Dequeue();
+            testQueue5.Dequeue();
+            testQueue5.Dequeue();
+            Assert.Null(testQueue5.Front);
+        }
+        [Fact]
+        public void TestQueueDequeue3()
+        {
+            Queue testQueue6 = new Queue();
+            testQueue6.Dequeue();
+            testQueue6.Dequeue();
+            Assert.Null(testQueue6.Rear); // should be null if I try to dequeue from an empty list
+        }
 
-        //}
-        //[Fact]
-        //public void TestQueueDequeue2()
-        //{
-
-        //}
-        //[Fact]
-        //public void TestQueueDequeue3()
-        //{
-
-        //}
-
-        ////queues Peek
-        //[Fact]
-        //public void TestQueuePeek1()
-        //{
-
-        //}
-        //[Fact]
-        //public void TestQueuePeek2()
-        //{
-
-        //}
-        //[Fact]
-        //public void TestQueuePeek3()
-        //{
-
-        //}
+        //queues Peek
+        [Fact]
+        public void TestQueuePeek1()
+        {
+            Node testNode14 = new Node(5);
+            Queue testQueue7 = new Queue(testNode14);
+            testQueue7.Enqueue(1);
+            testQueue7.Enqueue(2);
+            testQueue7.Enqueue(3);
+            Node frontNode2 = testQueue7.Peek();
+            Assert.Equal(5, frontNode2.Value);
+        }
+        [Fact]
+        public void TestQueuePeek2()
+        {
+            Queue testQueue8 = new Queue();
+            testQueue8.Enqueue(1);
+            testQueue8.Enqueue(2);
+            testQueue8.Enqueue(3);
+            testQueue8.Dequeue();
+            Node frontNode3 = testQueue8.Peek();
+            Assert.Equal(2, frontNode3.Value);
+        }
+        [Fact]
+        public void TestQueuePeek3()
+        {
+            Queue testQueue9 = new Queue();
+            testQueue9.Enqueue(3);
+            testQueue9.Dequeue();
+            Node frontNode4 = testQueue9.Peek();
+            Assert.Null(frontNode4);
+        }
     }
 }

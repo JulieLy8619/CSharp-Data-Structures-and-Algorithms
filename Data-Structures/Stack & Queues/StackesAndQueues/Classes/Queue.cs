@@ -31,9 +31,18 @@ namespace StackesAndQueues.Classes
         /// <param name="value">value of new node</param>
         public void Enqueue(int value)
         {
-            Node newNode = new Node(value);
-            Rear.Next = newNode;
-            Rear = newNode;
+            if (Front == null) //if queue was empty and I add one
+            {
+                Node newNode = new Node(value);
+                Rear = newNode;
+                Front = newNode;
+            }
+            else
+            {
+                Node newNode = new Node(value);
+                Rear.Next = newNode;
+                Rear = newNode;
+            }
         }
 
         /// <summary>
