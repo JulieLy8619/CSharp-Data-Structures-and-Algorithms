@@ -1,17 +1,27 @@
 # Stacks and Queues
-<!-- Short summary or background information -->
+We are creating the classes for stack and queues, like a library to be used later like we did with Linked List
 
 ## Challenge
-<!-- Description of the challenge -->
+We were tasked to create a nodes, stacks, and queues class. For the stack and queues classes, we needed to add methods to add/remove from it and look at the "front/top" if it.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+We found the front (or end) and added a node. Since they have pointers to these locations, we didn't need to traverse the stack/queue, so it is Big O(1)
+
 
 ## API
-<!-- Description of each method publicly available to your Stack and Queue-->
+API's for Stacks
+- Push (add node to stack)
+- Pop (remove node from stack)
+- Peek (look at whats at the top of the stack)
+
+API's for Queues
+- Enqueue (add a node to the back of the queue)
+- Dequeue (remove a node from the front of the queue)
+- Peek (look at whats at the front of the queue)
 
 ## Solution
 
 ## Contributors
+Amanda Iverson walked through Stack and queues in class
 
 
