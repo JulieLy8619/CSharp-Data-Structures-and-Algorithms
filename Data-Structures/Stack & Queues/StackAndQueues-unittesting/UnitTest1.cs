@@ -14,8 +14,8 @@ namespace StackAndQueues_unittesting
             Node testNode1 = new Node(5);
             Stack testStack1 = new Stack(testNode1);
             testStack1.Push(10);
-            Node topNode = testStack1.Peek();
-            Assert.Equal(10, topNode.Value);
+            Node topNode1 = testStack1.Peek();
+            Assert.Equal(10, topNode1.Value);
         }
         //new stack without node, so should be null then add 1
         [Fact]
@@ -23,8 +23,8 @@ namespace StackAndQueues_unittesting
         {
             Stack testStack2 = new Stack();
             testStack2.Push(5);
-            Node topNode = testStack2.Peek();
-            Assert.Equal(5, topNode.Value);
+            Node topNode2 = testStack2.Peek();
+            Assert.Equal(5, topNode2.Value);
         }
         [Fact]
         public void TestStackPush3()
@@ -33,8 +33,8 @@ namespace StackAndQueues_unittesting
             testStack3.Push(1);
             testStack3.Push(2);
             testStack3.Push(3);
-            Node topNode = testStack3.Peek();
-            Assert.Equal(3, topNode.Value);
+            Node topNode3 = testStack3.Peek();
+            Assert.Equal(3, topNode3.Value);
         }
 
         //stacks Pop
@@ -45,8 +45,8 @@ namespace StackAndQueues_unittesting
             testStack4.Push(1);
             testStack4.Push(2);
             testStack4.Pop();
-            Node topNode = testStack4.Peek();
-            Assert.Equal(1, topNode.Value);
+            Node topNode4 = testStack4.Peek();
+            Assert.Equal(1, topNode4.Value);
         }
         [Fact]
         public void TestStackPop2()
@@ -56,8 +56,8 @@ namespace StackAndQueues_unittesting
             testStack5.Push(10);
             testStack5.Push(20);
             testStack5.Pop();
-            Node topNode = testStack5.Peek();
-            Assert.Equal(10, topNode.Value);
+            Node topNode5 = testStack5.Peek();
+            Assert.Equal(10, topNode5.Value);
         }
         [Fact]
         public void TestStackPop3()
@@ -68,8 +68,8 @@ namespace StackAndQueues_unittesting
             testStack6.Pop();
             testStack6.Pop();
             testStack6.Pop(); //test trying to pop off more than whats in stack
-            Node topNode = testStack6.Peek();
-            Assert.Null(topNode);
+            Node topNode6 = testStack6.Peek();
+            Assert.Null(topNode6);
         }
 
         //stacks Peek
@@ -79,72 +79,84 @@ namespace StackAndQueues_unittesting
             Node testNode7 = new Node(5);
             Stack testStack7 = new Stack(testNode7);
             testStack7.Push(10);
-            Node topNode = testStack7.Peek();
-            Assert.Equal(10, topNode.Value);
+            Node topNode7 = testStack7.Peek();
+            Assert.Equal(10, topNode7.Value);
         }
         [Fact]
         public void TestStackPeek2()
         {
             Stack testStack8 = new Stack();
             testStack8.Push(5);
-            Node topNode = testStack8.Peek();
-            Assert.Equal(5, topNode.Value);
+            Node topNode8 = testStack8.Peek();
+            Assert.Equal(5, topNode8.Value);
         }
         [Fact]
         public void TestStackPeek3()
         {
             Stack testStack9 = new Stack();
-            Node topNode = testStack9.Peek();
-            Assert.Null(topNode); //tests empty stack
+            Node topNode9 = testStack9.Peek();
+            Assert.Null(topNode9); //tests empty stack
         }
 
-        ////queues Enqueue
-        //[Fact]
-        //public void Test1()
-        //{
+        //queues Enqueue
+        [Fact]
+        public void TestQueueEnqueue1()
+        {
+            Node testNode10 = new Node(5);
+            Queue testQueue = new Queue(testNode10);
+            testQueue.Enqueue(100);
+            Assert.Equal(100, testQueue.Rear.Value);
+        }
+        [Fact]
+        public void TestQueueEnqueue2()
+        {
+            Node testNode10 = new Node(5);
+            Queue testQueue = new Queue(testNode10);
+            testQueue.Enqueue(100);
+            testQueue.Enqueue(200);
+            testQueue.Enqueue(300);
+            testQueue.Enqueue(400);
+            Assert.Equal(400, testQueue.Rear.Value);
 
-        //}
-        //[Fact]
-        //public void Test1()
-        //{
-
-        //}
-        //[Fact]
-        //public void Test1()
-        //{
-
-        //}
+        }
+        [Fact]
+        public void TestQueueEnqueue3()
+        {
+            Queue testQueue = new Queue();
+            Node rearNode3 = testQueue.Peek();
+            Assert.Null(rearNode3);
+        }
 
         ////queues Dequeue
         //[Fact]
-        //public void Test1()
+        //public void TestQueueDequeue1()
         //{
 
         //}
         //[Fact]
-        //public void Test1()
+        //public void TestQueueDequeue2()
         //{
 
         //}
         //[Fact]
-        //public void Test1()
+        //public void TestQueueDequeue3()
         //{
 
         //}
 
         ////queues Peek
         //[Fact]
-        //public void Test1()
+        //public void TestQueuePeek1()
         //{
 
         //}
         //[Fact]
-        //public void Test1()
+        //public void TestQueuePeek2()
         //{
 
         //}
         //[Fact]
-        //public void Test1()
+        //public void TestQueuePeek3()
         //{
 
         //}
