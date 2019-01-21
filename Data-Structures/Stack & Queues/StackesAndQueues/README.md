@@ -20,6 +20,7 @@ API's for Queues
 - Peek (look at whats at the front of the queue)
 
 ## Solution
+![](../../../assets/)
 
 ## Contributors
 Amanda Iverson walked through Stack and queues in class
