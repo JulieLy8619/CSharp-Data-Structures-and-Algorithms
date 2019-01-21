@@ -20,9 +20,11 @@ API's for Queues
 - Peek (look at whats at the front of the queue)
 
 ## Solution
-![](../../../assets/)
+only did tests, does nothing in the console
+![testsPass](../../../assets/Lab10StackQueuesTests.JPG)
 
 ## Contributors
 Amanda Iverson walked through Stack and queues in class
+Jeff Martinez helped explaning why I didn't need to set the rear.next if the queue was empty, which then fixed 2 of my tests
 
 
