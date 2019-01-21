@@ -6,8 +6,10 @@ namespace StackesAndQueues.Classes
 {
     class Stack
     {
+        //propertiy
         public Node Top { get; set; }
         
+        //instantiate
         //stack created without a node given
         public Stack()
         {
