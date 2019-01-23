@@ -7,13 +7,11 @@ namespace QueueWithStacks.Classes
 {
     public class PseudoQueue
     {
+        //properties
         public Stacks frontStack = new Stacks();
         public Stacks rearStack = new Stacks();
-        //properties
-        //public Node Front { get; set; }
-        //public Node Rear { get; set; }
-        //public Stack rearStack { get; set; }
-        //public Stack frontStack { get; set; }
+        //public Stacks rearStack { get; set; }
+        //public Stacks frontStack { get; set; }
 
 
         //instruction said to instantiate the stacks in this class
@@ -46,6 +44,7 @@ namespace QueueWithStacks.Classes
             else
             {
                 //just has one node in list
+                //need to add if we try to dequeue more than what is in the list
                 if (frontStack.Top.Next == null)
                 {
                     return frontStack.Top;
@@ -76,28 +75,31 @@ namespace QueueWithStacks.Classes
         /// </summary>
         /// <param name="value">value of node you want to add</param>
         /// <returns>the queue (which is the stack) after the new node is added</returns>
-        public Stacks PseudoQueueEnqueue(int value)
+        public void PseudoQueueEnqueue(int value)
         {
-            if (frontStack.Top == null)
-            {
-                return null;
-            }
-            else
-            {
+            //if (frontStack == null)
+            //{
+            //    Node newNode = new Node(value);
+            //    frontStack.Top = newNode;
+            //}
+            //else
+            //{
                 frontStack.Push(value);
-                return frontStack;
-            }
+            //return frontStack;
+        //}
         }
 
+        //just so I can check and see it is working
         public void PseudoQueuePrint()
         {
             Node tempIterator = frontStack.Top;
             do
             {
-                Console.WriteLine(tempIterator);
+                Console.Write(tempIterator.Value + " => ");
                 tempIterator = tempIterator.Next;
-            } while (tempIterator.Next != null);
-            Console.WriteLine(tempIterator);
+            } while (tempIterator.Next != null); //this breaks when I only have one item in stack
+            Console.WriteLine(tempIterator.Value);
+
         }
     }
 

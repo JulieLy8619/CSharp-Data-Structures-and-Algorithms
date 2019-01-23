@@ -28,9 +28,17 @@ namespace QueueWithStacks.Classes
         /// <param name="value">value of the new node</param>
         public void Push(int value)
         {
-            Node newNode = new Node(value);
-            newNode.Next = Top;
-            Top = newNode;
+            if (Top == null)
+            {
+                Node newNode = new Node(value);
+                Top = newNode;
+            }
+            else
+            {
+                Node newNode = new Node(value);
+                newNode.Next = Top;
+                Top = newNode;
+            }
         }
 
         /// <summary>

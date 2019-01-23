@@ -17,8 +17,13 @@ namespace QueueWithStacks
         public static void QueueWithStacks()
         {
             //make a queue with stacks object
-            PseudoQueue progPseudoStack = new PseudoQueue();
-            progPseudoStack.PseudoQueueEnqueue(5);
+            PseudoQueue progPseudoStack = new PseudoQueue(1);
+            progPseudoStack.PseudoQueueEnqueue(2);
+            progPseudoStack.PseudoQueueEnqueue(3);
+            progPseudoStack.PseudoQueueDequeue();
+            progPseudoStack.PseudoQueueDequeue();
+            progPseudoStack.PseudoQueueEnqueue(4);
+            progPseudoStack.PseudoQueueDequeue();
 
             Console.WriteLine("the psuedo queue: ");
             progPseudoStack.PseudoQueuePrint();
