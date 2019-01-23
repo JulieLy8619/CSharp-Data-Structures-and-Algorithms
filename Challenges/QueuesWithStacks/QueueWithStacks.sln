@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueWithStacks", "QueueWithStacks\QueueWithStacks.csproj", "{BD6C2ECA-9F4B-4C47-B93F-3488A2BC958B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueuesWithStacks-unittesting", "QueuesWithStacks-unittesting\QueuesWithStacks-unittesting.csproj", "{3EEE8E35-F587-4409-81D0-1CA95A232EED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD6C2ECA-9F4B-4C47-B93F-3488A2BC958B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD6C2ECA-9F4B-4C47-B93F-3488A2BC958B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD6C2ECA-9F4B-4C47-B93F-3488A2BC958B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD6C2ECA-9F4B-4C47-B93F-3488A2BC958B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EEE8E35-F587-4409-81D0-1CA95A232EED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EEE8E35-F587-4409-81D0-1CA95A232EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EEE8E35-F587-4409-81D0-1CA95A232EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EEE8E35-F587-4409-81D0-1CA95A232EED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59BE888E-E0E1-47BF-8A9D-AC838EB5B914}
+	EndGlobalSection
+EndGlobal
