@@ -12,9 +12,15 @@ namespace QueueWithStacks
         /// <summary>
         /// 
         /// </summary>
-        public void QueueWithStacks()
+        public static void QueueWithStacks()
         {
+            //make a queue with stacks object
+            
+            //enqueue
 
+            //dequeue
+
+            //do some console writelines so I can what the stacks and queues are doing
         }
     }
 }

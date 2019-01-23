@@ -9,6 +9,7 @@ namespace QueueWithStacks.Classes
         public int Value { get; set; }
         public Node Next { get; set; }
 
+        //instantiaton
         public Node(int value)
         {
             Value = value;
