@@ -7,11 +7,14 @@ namespace QueueWithStacks.Classes
 {
     public class PseudoQueue
     {
+        public Stacks frontStack = new Stacks();
+        public Stacks rearStack = new Stacks();
         //properties
-        public Node Front { get; set; }
-        public Node Rear { get; set; }
-        public Stack rearStack { get; set; }
-        public Stack frontStack { get; set; }
+        //public Node Front { get; set; }
+        //public Node Rear { get; set; }
+        //public Stack rearStack { get; set; }
+        //public Stack frontStack { get; set; }
+
 
         //instruction said to instantiate the stacks in this class
 
@@ -21,63 +24,81 @@ namespace QueueWithStacks.Classes
         {
             rearStack = null;
             frontStack = null;
-            Front = null;
-            Rear = null;
         }
 
-        //queue with a given node
-        //fo now we'll say we only can instantiate an empty queue
-        //public PseudoQueue(Stack inputStack)
-        //{
-        //    Stack rearStack = inputStack
-        //    Rear = inputStack.Top;
-        //    //flip stack and set front
-        //    Front = node;
-        //}
-
-        //start a queue with a node
-        public PseudoQueue(Node node)
+        //instantiate a "queue" with a node
+        public PseudoQueue(int value)
         {
-            frontStack.Push(node);
-            Front = node;
-            Rear = node;
+            frontStack.Push(value); //which should point "top" to this node
         }
 
         /// <summary>
-        /// will remove one node from the front of the "queue"
+        /// will remove one node from the "front" of the "queue"
         /// </summary>
         /// <param name="node">returns "top" node</param>
-        public Node PseudoQueueDequeue(Node node)
+        public Node PseudoQueueDequeue()
         {
-            //if satacks are empty
-            if (Front == null)
+            //if stack is empty
+            if (frontStack == null)
             {
                 return null;
             }
             else
             {
-                Node temp = Front;
-                Front = Front.Next;
-                temp.Next = null;
-                frontStack.Pop();
-                return temp;
+                //just has one node in list
+                if (frontStack.Top.Next == null)
+                {
+                    return frontStack.Top;
+                }
+                else
+                {
+                    do
+                    {
+                        Node tempNode1 = frontStack.Pop();
+                        rearStack.Push(tempNode1.Value);
+                    } while (frontStack.Top.Next != null);
+                    Node returnNode = frontStack.Pop();
+                    do
+                    {
+                        Node tempNode2 = rearStack.Pop();
+                        frontStack.Push(tempNode2.Value);
+                    } while (rearStack.Top.Next != null); //moves all back to front stack
+                    //do it once more for last item
+                    Node tempNode3 = rearStack.Pop();
+                    frontStack.Push(tempNode3.Value);
+                    return returnNode;
+                }
             }
         }
 
         /// <summary>
-        /// added a node to the end of the "queue"
+        /// added a node to the end of the "queue" (which is the bottom of the bottom of the stack)
         /// </summary>
         /// <param name="value">value of node you want to add</param>
-        /// <returns>the queue after the new node is added</returns>
-        public PseudoQueue PseudoQueueEnqueue(int value)
+        /// <returns>the queue (which is the stack) after the new node is added</returns>
+        public Stacks PseudoQueueEnqueue(int value)
         {
-
+            if (frontStack.Top == null)
+            {
+                return null;
+            }
+            else
+            {
+                frontStack.Push(value);
+                return frontStack;
+            }
         }
 
-        //technically the docks didn't say we needed to do this
-        //public Node PseudoPeek()
-        //{
-
-        //}
+        public void PseudoQueuePrint()
+        {
+            Node tempIterator = frontStack.Top;
+            do
+            {
+                Console.WriteLine(tempIterator);
+                tempIterator = tempIterator.Next;
+            } while (tempIterator.Next != null);
+            Console.WriteLine(tempIterator);
+        }
     }
+
 }

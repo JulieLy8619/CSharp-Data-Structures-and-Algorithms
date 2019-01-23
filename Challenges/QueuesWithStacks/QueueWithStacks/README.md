@@ -1,5 +1,5 @@
 # Implement a Queue using two Stacks.
-We were to create a PseudoQueue class that takes in two stacks (and the stacks take in nodes) that still acts like a queue.
+We were to create a PseudoQueue class that is made up of two stacks and simulates how a queue behaves.
 
 ## Challenge
 The major challenge of this was the Queues's dequeue because the "end" was at the bottome of the stack
