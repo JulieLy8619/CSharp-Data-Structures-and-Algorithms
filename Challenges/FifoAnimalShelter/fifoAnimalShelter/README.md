@@ -8,4 +8,4 @@
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## Solution
-![whiteboard](../../../../assets/CodeChall12WB.JPG)
+![whiteboard](../../../assets/CodeChall1Image.jpg)
