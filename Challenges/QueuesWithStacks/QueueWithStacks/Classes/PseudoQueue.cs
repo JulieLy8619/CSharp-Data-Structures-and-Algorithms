@@ -37,7 +37,7 @@ namespace QueueWithStacks.Classes
         public Node PseudoQueueDequeue()
         {
             //if stack is empty
-            if (frontStack == null)
+            if (frontStack.Top == null)
             {
                 return null;
             }
@@ -90,6 +90,7 @@ namespace QueueWithStacks.Classes
         }
 
         //just so I can check and see it is working
+        //not allowed to iterate through a stack or queue
         public void PseudoQueuePrint()
         {
             Node tempIterator = frontStack.Top;
