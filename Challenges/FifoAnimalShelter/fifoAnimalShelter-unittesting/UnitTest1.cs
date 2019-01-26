@@ -2,10 +2,13 @@ using System;
 using Xunit;
 using fifoAnimalShelter.Classes;
 
+
 namespace fifoAnimalShelter_unittesting
 {
     public class UnitTest1
     {
+        //animal queue testing
+        //enqueue
         [Fact]
         public void TestAnimalQEnQ1()
         {
@@ -43,7 +46,6 @@ namespace fifoAnimalShelter_unittesting
         }
 
         //dequeue
-
         [Fact]
         public void TestAnimalQDeQ1()
         {
@@ -117,7 +119,53 @@ namespace fifoAnimalShelter_unittesting
             Assert.Equal(AnimalOption.Cat, type5);
         }
 
+        //shelter testing
+        //enqueue
+        [Fact]
+        public void TestShelterEnQ1()
+        {
+            Animal animal1 = new Animal(AnimalOption.Dog);
+            Animal animal1A = new Animal(AnimalOption.Dog);
+            AnimalShelter shelter1 = new AnimalShelter(animal1);
+            shelter1.ShelterEnqueue(animal1A);
+            AnimalNode shelterAnimalNode1 = shelter1.AnimalQueue1.Rear;
+            AnimalOption type6 = shelterAnimalNode1.AnimalValue.AnimalProp;
+            Assert.Equal(AnimalOption.Dog, type6);
 
+
+        }
+        [Fact]
+        public void TestShelterEnQ2()
+        {
+            Animal animal2 = new Animal(AnimalOption.Dog);
+            Animal animal3 = new Animal(AnimalOption.Cat);
+            Animal animal4 = new Animal(AnimalOption.Cat);
+            AnimalShelter shelter2 = new AnimalShelter(animal2);
+            shelter2.ShelterEnqueue(animal3);
+            shelter2.ShelterEnqueue(animal4);
+            AnimalNode shelterAnimalNode2 = shelter2.AnimalQueue1.Rear;
+            AnimalOption type7 = shelterAnimalNode2.AnimalValue.AnimalProp;
+            Assert.Equal(AnimalOption.Cat, type7);
+
+        }
+        [Fact]
+        public void TestShelterEnQ3()
+        {
+            Animal animal5 = new Animal(AnimalOption.Dog);
+            Animal animal6 = new Animal(AnimalOption.Cat);
+            Animal animal7 = new Animal(AnimalOption.Dog);
+            Animal animal8 = new Animal(AnimalOption.Dog);
+            AnimalShelter shelter3 = new AnimalShelter(animal5);
+            shelter3.ShelterEnqueue(animal6);
+            shelter3.ShelterEnqueue(animal7);
+            shelter3.ShelterEnqueue(animal8);
+            AnimalNode shelterAnimalNode3 = shelter3.AnimalQueue1.Rear;
+            AnimalOption type8 = shelterAnimalNode3.AnimalValue.AnimalProp;
+            Assert.Equal(AnimalOption.Dog, type8);
+
+        }
+
+        //dequeue
     }
 }
 
