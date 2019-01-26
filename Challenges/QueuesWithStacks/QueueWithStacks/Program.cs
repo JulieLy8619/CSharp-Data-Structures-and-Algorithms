@@ -7,22 +7,16 @@ namespace QueueWithStacks
     {
         public static void Main(string[] args)
         {
-            //QueueWithStacks();
+            QueueWithStacks();
             Console.ReadLine(); //to stop it from auto closing prog
         }
 
         /// <summary>
-        /// 
+        /// just prints hello world because the instructions didn't say what it wanted with this method
         /// </summary>
-        //public static void QueueWithStacks()
-        //{
-        //    make a queue with stacks object
-
-        //    enqueue
-
-        //    dequeue
-
-        //    do some console writelines so I can what the stacks and queues are doing
-        //}
+        public static void QueueWithStacks()
+        {
+            Console.WriteLine("Hello World from QueueWithStacks");
+        }
     }
 }
