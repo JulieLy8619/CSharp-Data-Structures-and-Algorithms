@@ -32,6 +32,7 @@ namespace QueueWithStacks.Classes
         public Node PseudoQueueDequeue()
         {
             if (outStack.Top != null)
+
             {
                 return outStack.Pop();
             }
