@@ -16,4 +16,5 @@ Whiteboard (I ended up coding a different solution from our original whitebaord)
 
 ## Collabortation
 Partnered with Xia Liu
+Amanda Iverson gave a better idea for a solution of an in stack and an out stack.
 

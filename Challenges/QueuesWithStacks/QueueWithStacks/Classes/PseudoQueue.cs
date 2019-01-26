@@ -8,26 +8,21 @@ namespace QueueWithStacks.Classes
     public class PseudoQueue
     {
         //properties
-        public Stacks frontStack = new Stacks();
-        public Stacks rearStack = new Stacks();
-        //public Stacks rearStack { get; set; }
-        //public Stacks frontStack { get; set; }
+        public Stacks inStack = new Stacks();
+        public Stacks outStack = new Stacks();
 
-
-        //instruction said to instantiate the stacks in this class
-
-        //instantiate
+        //instruction said to instantiate the stacks in the class
         //queue with nothing given
         public PseudoQueue()
         {
-            rearStack = null;
-            frontStack = null;
+            inStack = null;
+            outStack = null;
         }
 
         //instantiate a "queue" with a node
         public PseudoQueue(int value)
         {
-            frontStack.Push(value); //which should point "top" to this node
+            inStack.Push(value);
         }
 
         /// <summary>
@@ -36,70 +31,37 @@ namespace QueueWithStacks.Classes
         /// <param name="node">returns "top" node</param>
         public Node PseudoQueueDequeue()
         {
-            //if stack is empty
-            if (frontStack == null)
+            if (outStack != null)
             {
-                return null;
+                return outStack.Pop();
             }
             else
             {
-                //just has one node in list
-                //need to add if we try to dequeue more than what is in the list
-                if (frontStack.Top.Next == null)
+                while (inStack != null)
                 {
-                    return frontStack.Top;
+                    Node tempNode = inStack.Pop();
+                    outStack.Push(tempNode.Value);
                 }
-                else
-                {
-                    do
-                    {
-                        Node tempNode1 = frontStack.Pop();
-                        rearStack.Push(tempNode1.Value);
-                    } while (frontStack.Top.Next != null);
-                    Node returnNode = frontStack.Pop();
-                    do
-                    {
-                        Node tempNode2 = rearStack.Pop();
-                        frontStack.Push(tempNode2.Value);
-                    } while (rearStack.Top.Next != null); //moves all back to front stack
-                    //do it once more for last item
-                    Node tempNode3 = rearStack.Pop();
-                    frontStack.Push(tempNode3.Value);
-                    return returnNode;
-                }
+                return outStack.Pop();
             }
         }
 
         /// <summary>
-        /// added a node to the end of the "queue" (which is the bottom of the bottom of the stack)
+        /// added a node to the end of the "queue" so this puts it into the IN stack
         /// </summary>
         /// <param name="value">value of node you want to add</param>
-        /// <returns>the queue (which is the stack) after the new node is added</returns>
         public void PseudoQueueEnqueue(int value)
         {
-            //if (frontStack == null)
-            //{
-            //    Node newNode = new Node(value);
-            //    frontStack.Top = newNode;
-            //}
-            //else
-            //{
-                frontStack.Push(value);
-            //return frontStack;
-        //}
+            inStack.Push(value);
         }
 
-        //just so I can check and see it is working
-        public void PseudoQueuePrint()
+        /// <summary>
+        /// peek what is at "front" of "queue" (I needed this for testing purposes
+        /// </summary>
+        /// <returns>node at "front" of "queue"</returns>
+        public Node PseudeoPeek()
         {
-            Node tempIterator = frontStack.Top;
-            do
-            {
-                Console.Write(tempIterator.Value + " => ");
-                tempIterator = tempIterator.Next;
-            } while (tempIterator.Next != null); //this breaks when I only have one item in stack
-            Console.WriteLine(tempIterator.Value);
-
+            return outStack.Peek();
         }
     }
 

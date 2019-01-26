@@ -7,33 +7,22 @@ namespace QueueWithStacks
     {
         public static void Main(string[] args)
         {
-            QueueWithStacks();
+            //QueueWithStacks();
             Console.ReadLine(); //to stop it from auto closing prog
         }
 
         /// <summary>
         /// 
         /// </summary>
-        public static void QueueWithStacks()
-        {
-            //make a queue with stacks object
-            PseudoQueue progPseudoStack = new PseudoQueue(1);
-            progPseudoStack.PseudoQueueEnqueue(2);
-            progPseudoStack.PseudoQueueEnqueue(3);
-            progPseudoStack.PseudoQueueDequeue();
-            progPseudoStack.PseudoQueueDequeue();
-            progPseudoStack.PseudoQueueEnqueue(4);
-            progPseudoStack.PseudoQueueDequeue();
+        //public static void QueueWithStacks()
+        //{
+        //    make a queue with stacks object
 
-            Console.WriteLine("the psuedo queue: ");
-            progPseudoStack.PseudoQueuePrint();
+        //    enqueue
 
+        //    dequeue
 
-            //enqueue
-
-            //dequeue
-
-            //do some console writelines so I can what the stacks and queues are doing
-        }
+        //    do some console writelines so I can what the stacks and queues are doing
+        //}
     }
 }
