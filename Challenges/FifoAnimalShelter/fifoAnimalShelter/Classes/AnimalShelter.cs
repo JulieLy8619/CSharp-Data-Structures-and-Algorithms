@@ -37,7 +37,7 @@ namespace fifoAnimalShelter.Classes
             {
                 while (AnimalQueue1.Peek() != null)
                 {
-                    if (AnimalQueue1.Peek().AnimalValue == pref)
+                    if (AnimalQueue1.Peek().AnimalValue.AnimalProp == pref.AnimalProp)
                     {
                         AnimalNode returnAnimal = new AnimalNode();
                         returnAnimal = AnimalQueue1.Dequeue();

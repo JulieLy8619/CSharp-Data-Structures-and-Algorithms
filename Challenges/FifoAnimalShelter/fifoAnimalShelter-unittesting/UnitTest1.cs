@@ -131,8 +131,6 @@ namespace fifoAnimalShelter_unittesting
             AnimalNode shelterAnimalNode1 = shelter1.AnimalQueue1.Rear;
             AnimalOption type6 = shelterAnimalNode1.AnimalValue.AnimalProp;
             Assert.Equal(AnimalOption.Dog, type6);
-
-
         }
         [Fact]
         public void TestShelterEnQ2()
@@ -166,6 +164,44 @@ namespace fifoAnimalShelter_unittesting
         }
 
         //dequeue
+        [Fact]
+        public void TestShelterDeQ1()
+        {
+            Animal animal9 = new Animal(AnimalOption.Dog);
+            Animal wantedAnimal1 = new Animal(AnimalOption.Dog);
+            AnimalShelter shelter4 = new AnimalShelter(animal9);
+            AnimalNode received1 = shelter4.ShelterDequeue(wantedAnimal1);
+            Assert.Equal(AnimalOption.Dog, received1.AnimalValue.AnimalProp);
+        }
+        [Fact]
+        public void TestShelterDeQ2()
+        {
+            Animal animal10 = new Animal(AnimalOption.Dog);
+            Animal wantedAnimal2 = new Animal(AnimalOption.Cat);
+            AnimalShelter shelter4 = new AnimalShelter(animal10);
+            AnimalNode received2 = shelter4.ShelterDequeue(wantedAnimal2);
+            Assert.Null(received2);
+        }
+        [Fact]
+        public void TestShelterDeQ3()
+        {
+            Animal animal11 = new Animal(AnimalOption.Dog);
+            Animal animal12 = new Animal(AnimalOption.Cat);
+            Animal animal13 = new Animal(AnimalOption.Cat);
+            Animal animal14 = new Animal(AnimalOption.Dog);
+            Animal wantedAnimal3 = new Animal(AnimalOption.Cat);
+            Animal wantedAnimal4 = new Animal(AnimalOption.Dog);
+            Animal wantedAnimal5 = new Animal(AnimalOption.Dog);
+            AnimalShelter shelter5 = new AnimalShelter(animal11);
+            shelter5.ShelterEnqueue(animal12);
+            shelter5.ShelterEnqueue(animal13);
+            shelter5.ShelterEnqueue(animal14);
+            shelter5.ShelterDequeue(wantedAnimal3);
+            shelter5.ShelterDequeue(wantedAnimal4);
+            shelter5.ShelterDequeue(wantedAnimal5);
+            AnimalNode stillInShelter = shelter5.AnimalQueue1.Front;
+            Assert.Equal(AnimalOption.Cat, stillInShelter.AnimalValue.AnimalProp);
+        }
     }
 }
 
@@ -184,14 +220,13 @@ namespace fifoAnimalShelter_unittesting
         -enqueue
         -dequeue
         -peek
-     -shelter
-        -empty shelter
+     -shelter 
         -enqueue
             -addeding to shelter
         -dequeue
             -removing from shelter
             -trying to remove from shelter when its empty
             -finding a match adoption
-            -user's choice isn't in shelter
+            -user's choice isn't in shelter //never possible because they way this is written it has to be dog or cat
         -adding 2, removing 1, adding 2 (test integrity of queue order)
  * */
