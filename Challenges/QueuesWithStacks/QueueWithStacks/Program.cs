@@ -12,28 +12,11 @@ namespace QueueWithStacks
         }
 
         /// <summary>
-        /// 
+        /// just prints hello world because the instructions didn't say what it wanted with this method
         /// </summary>
         public static void QueueWithStacks()
         {
-            //make a queue with stacks object
-            PseudoQueue progPseudoStack = new PseudoQueue(1);
-            progPseudoStack.PseudoQueueEnqueue(2);
-            progPseudoStack.PseudoQueueEnqueue(3);
-            progPseudoStack.PseudoQueueDequeue();
-            progPseudoStack.PseudoQueueDequeue();
-            progPseudoStack.PseudoQueueEnqueue(4);
-            progPseudoStack.PseudoQueueDequeue();
-
-            Console.WriteLine("the psuedo queue: ");
-            progPseudoStack.PseudoQueuePrint();
-
-
-            //enqueue
-
-            //dequeue
-
-            //do some console writelines so I can what the stacks and queues are doing
+            Console.WriteLine("Hello World from QueueWithStacks");
         }
     }
 }
