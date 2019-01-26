@@ -7,7 +7,7 @@ namespace fifoAnimalShelter
         static void Main(string[] args)
         {
             FIFOAnimalShelter();
-            //Console.WriteLine("Hello World!");
+            Console.ReadLine(); //so it doesn't auto exit
         }
 
         /// <summary>
