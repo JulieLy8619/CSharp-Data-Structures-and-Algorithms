@@ -13,8 +13,10 @@ Space is O(1) because we would only create a new node
 ## Solution
 Whiteboard (I ended up coding a different solution from our original whitebaord)
 ![whiteboardCC11](../../../assets/CodeChall11WB.jpg)
+Tests Pass
+![tests](../../../assets/CodeChall11Tests.JPG)
 
 ## Collabortation
 Partnered with Xia Liu
-Amanda Iverson gave a better idea for a solution of an in stack and an out stack.
+Amanda Iverson gave a better idea for a solution of an IN stack and an OUT stack.
 
