@@ -13,8 +13,8 @@ namespace fifoAnimalShelter_unittesting
             AnimalQueue georgeQ = new AnimalQueue();
             georgeQ.Enqueue(dogGeorge);
             AnimalNode georgeNode = georgeQ.Dequeue();
-            AnimalOption type = georgeNode.AnimalValue.AnimalProp;
-            Assert.Equal(AnimalOption.Dog, type);
+            AnimalOption type1 = georgeNode.AnimalValue.AnimalProp;
+            Assert.Equal(AnimalOption.Dog, type1);
 
         }
         [Fact]
@@ -51,8 +51,8 @@ namespace fifoAnimalShelter_unittesting
             AnimalQueue dog1Q = new AnimalQueue();
             dog1Q.Enqueue(dog1);
             AnimalNode dog1Node = dog1Q.Dequeue();
-            AnimalOption type = dog1Node.AnimalValue.AnimalProp;
-            Assert.Equal(AnimalOption.Dog, type);
+            AnimalOption type2 = dog1Node.AnimalValue.AnimalProp;
+            Assert.Equal(AnimalOption.Dog, type2);
         }
         [Fact]
         public void TestAnimalQDeQ2()
@@ -75,9 +75,48 @@ namespace fifoAnimalShelter_unittesting
             animal1Q.Enqueue(cat2);
             AnimalNode junk1Node = animal1Q.Dequeue();
             AnimalNode checkNode = animal1Q.Dequeue();
-            AnimalOption type = checkNode.AnimalValue.AnimalProp;
-            Assert.Equal(AnimalOption.Cat, type);
+            AnimalOption type3 = checkNode.AnimalValue.AnimalProp;
+            Assert.Equal(AnimalOption.Cat, type3);
         }
+
+        //peek
+        [Fact]
+        public void TestAnimalQPeek1()
+        {
+            Animal dogPeek1 = new Animal(AnimalOption.Dog);
+            AnimalQueue dogPeek1Q = new AnimalQueue();
+            dogPeek1Q.Enqueue(dogPeek1);
+            AnimalNode dog1Node = dogPeek1Q.Peek();
+            AnimalOption type4 = dog1Node.AnimalValue.AnimalProp;
+            Assert.Equal(AnimalOption.Dog, type4);
+        }
+
+        [Fact]
+        public void TestAnimalQPeek2()
+        {
+            Animal dogPeek2 = new Animal(AnimalOption.Dog);
+            AnimalQueue dogPeek2Q = new AnimalQueue();
+            dogPeek2Q.Enqueue(dogPeek2);
+            dogPeek2Q.Dequeue();
+            AnimalNode dog2Node = dogPeek2Q.Peek();
+            Assert.Null(dog2Node);
+        }
+        [Fact]
+        public void TestAnimalQPeek3()
+        {
+            Animal dogPeek3 = new Animal(AnimalOption.Dog);
+            Animal catPeek1 = new Animal(AnimalOption.Cat);
+            AnimalNode puppyNode2 = new AnimalNode(dogPeek3);
+            AnimalQueue animalPeek3Q = new AnimalQueue(puppyNode2);
+            animalPeek3Q.Enqueue(dogPeek3);
+            animalPeek3Q.Dequeue();
+            animalPeek3Q.Dequeue();
+            animalPeek3Q.Enqueue(catPeek1);
+            AnimalNode animal3Node = animalPeek3Q.Peek();
+            AnimalOption type5 = animal3Node.AnimalValue.AnimalProp;
+            Assert.Equal(AnimalOption.Cat, type5);
+        }
+
 
     }
 }
