@@ -42,16 +42,52 @@ namespace fifoAnimalShelter_unittesting
             Assert.Equal(AnimalOption.Cat, newQ3Rear.AnimalValue.AnimalProp);
         }
 
+        //dequeue
 
+        [Fact]
+        public void TestAnimalQDeQ1()
+        {
+            Animal dog1 = new Animal(AnimalOption.Dog);
+            AnimalQueue dog1Q = new AnimalQueue();
+            dog1Q.Enqueue(dog1);
+            AnimalNode dog1Node = dog1Q.Dequeue();
+            AnimalOption type = dog1Node.AnimalValue.AnimalProp;
+            Assert.Equal(AnimalOption.Dog, type);
+        }
+        [Fact]
+        public void TestAnimalQDeQ2()
+        {
+            Animal dog2 = new Animal(AnimalOption.Dog);
+            AnimalQueue dog2Q = new AnimalQueue();
+            dog2Q.Enqueue(dog2);
+            AnimalNode dog1Node = dog2Q.Dequeue();
+            Assert.Null(dog2Q.Front);
+        }
+        [Fact]
+        public void TestAnimalQDeQ3()
+        {
+            Animal dog3 = new Animal(AnimalOption.Dog);
+            Animal cat1 = new Animal(AnimalOption.Cat);
+            Animal cat2 = new Animal(AnimalOption.Cat);
+            AnimalNode puppyNode = new AnimalNode(dog3);
+            AnimalQueue animal1Q = new AnimalQueue(puppyNode);
+            animal1Q.Enqueue(cat1);
+            animal1Q.Enqueue(cat2);
+            AnimalNode junk1Node = animal1Q.Dequeue();
+            AnimalNode checkNode = animal1Q.Dequeue();
+            AnimalOption type = checkNode.AnimalValue.AnimalProp;
+            Assert.Equal(AnimalOption.Cat, type);
+        }
+
+    }
+}
+
+/*
         //[Fact]
         //public void Test1()
         //{
 
         //}
-    }
-}
-
-/*
  Things to think about for testing
     -animal
         -no methods so no tests needed
