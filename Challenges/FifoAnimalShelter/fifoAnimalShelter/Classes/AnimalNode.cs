@@ -10,6 +10,10 @@ namespace fifoAnimalShelter.Classes
         public Animal AnimalValue { get; set; }
         public AnimalNode Next { get; set; }
 
+        public AnimalNode()
+        {
+
+        }
         public AnimalNode(Animal value)
         {
             AnimalValue = value;
