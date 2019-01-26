@@ -17,16 +17,30 @@ namespace fifoAnimalShelter_unittesting
             Assert.Equal(AnimalOption.Dog, type);
 
         }
-        //[Fact]
-        //public void TestAnimalQEnQ2()
-        //{
-
-        //}
-        //[Fact]
-        //public void TestAnimalQEnQ3()
-        //{
-
-        //}
+        [Fact]
+        public void TestAnimalQEnQ2()
+        {
+            Animal dogBob = new Animal(AnimalOption.Dog);
+            Animal catBetty = new Animal(AnimalOption.Cat);
+            AnimalQueue newQ2 = new AnimalQueue();
+            newQ2.Enqueue(dogBob);
+            newQ2.Enqueue(catBetty);
+            AnimalNode newQ2Rear = newQ2.Rear;
+            Assert.Equal(AnimalOption.Cat, newQ2Rear.AnimalValue.AnimalProp);
+        }
+        [Fact]
+        public void TestAnimalQEnQ3()
+        {
+            Animal catKitty = new Animal(AnimalOption.Cat);
+            Animal dogLarry = new Animal(AnimalOption.Dog);
+            Animal catJenny = new Animal(AnimalOption.Cat);
+            AnimalNode kittyNode = new AnimalNode(catKitty);
+            AnimalQueue newQ3 = new AnimalQueue(kittyNode);
+            newQ3.Enqueue(dogLarry);
+            newQ3.Enqueue(catJenny);
+            AnimalNode newQ3Rear = newQ3.Rear;
+            Assert.Equal(AnimalOption.Cat, newQ3Rear.AnimalValue.AnimalProp);
+        }
 
 
         //[Fact]
