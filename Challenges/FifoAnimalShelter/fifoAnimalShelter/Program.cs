@@ -6,7 +6,16 @@ namespace fifoAnimalShelter
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            FIFOAnimalShelter();
+            Console.ReadLine(); //so it doesn't auto exit
+        }
+
+        /// <summary>
+        /// a method that outputs a message (created soloy because the instructions stated so)
+        /// </summary>
+        public static void FIFOAnimalShelter()
+        {
+            Console.WriteLine("Hello World from FIFOAnimalShelter");
         }
     }
 }
