@@ -11,7 +11,7 @@ namespace fifoAnimalShelter.Classes
         Cat
     }
 
-    class Animal
+    public class Animal
     {
         //property
         public AnimalOption AnimalProp { get; set; }

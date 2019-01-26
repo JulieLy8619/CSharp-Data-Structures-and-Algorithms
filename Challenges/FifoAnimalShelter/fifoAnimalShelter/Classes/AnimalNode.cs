@@ -5,7 +5,7 @@ using System.Text;
 namespace fifoAnimalShelter.Classes
 {
     //Node just adjusted so animal type instead of int type for VALUE
-    class AnimalNode
+    public class AnimalNode
     {
         public Animal AnimalValue { get; set; }
         public AnimalNode Next { get; set; }
