@@ -8,15 +8,15 @@ namespace QueueWithStacks.Classes
     public class PseudoQueue
     {
         //properties
-        public Stacks inStack = new Stacks();
-        public Stacks outStack = new Stacks();
+        Stacks inStack = new Stacks();
+        Stacks outStack = new Stacks();
 
         //instruction said to instantiate the stacks in the class
         //queue with nothing given
         public PseudoQueue()
         {
-            inStack = null;
-            outStack = null;
+            //inStack = null;
+            //outStack = null;
         }
 
         //instantiate a "queue" with a node
@@ -31,13 +31,13 @@ namespace QueueWithStacks.Classes
         /// <param name="node">returns "top" node</param>
         public Node PseudoQueueDequeue()
         {
-            if (outStack != null)
+            if (outStack.Top != null)
             {
                 return outStack.Pop();
             }
             else
             {
-                while (inStack != null)
+                while (inStack.Top != null)
                 {
                     Node tempNode = inStack.Pop();
                     outStack.Push(tempNode.Value);
@@ -61,7 +61,19 @@ namespace QueueWithStacks.Classes
         /// <returns>node at "front" of "queue"</returns>
         public Node PseudeoPeek()
         {
-            return outStack.Peek();
+            if (outStack.Top != null)
+            {
+                return outStack.Peek();
+            }
+            else
+            {
+                while (inStack.Top != null)
+                {
+                    Node tempNode = inStack.Pop();
+                    outStack.Push(tempNode.Value);
+                }
+                return outStack.Peek();
+            }
         }
     }
 
