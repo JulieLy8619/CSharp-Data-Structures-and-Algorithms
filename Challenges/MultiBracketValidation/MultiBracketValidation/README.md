@@ -12,6 +12,6 @@ This would be Big O(n) for time because worst case we would walk the entire leng
 ## Solution
 ![CC13whiteboard](../../../assets/CodeChall13WB.jpg)
 This is what it would look like if you ran the program
-![happyPath](../../../assets/)
+![happyPath](../../../assets/CodeChall13Console.JPG)
 This shows my tests passed
-![tests](../../../assets/)
+![tests](../../../assets/CodeChall13Tests.JPG)
