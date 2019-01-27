@@ -15,18 +15,28 @@ namespace fifoAnimalShelter.Classes
         //{
 
         //}
+        //instantiate
         public AnimalShelter(Animal newAnimal)
         {
             AnimalQueue1.Enqueue(newAnimal);
         }
 
         //enqueue
+        /// <summary>
+        /// Adds a new animal to the shelter (queue1)
+        /// </summary>
+        /// <param name="value">animal object want to add to shelter (queue)</param>
         public void ShelterEnqueue(Animal value)
         {
             AnimalQueue1.Enqueue(value);
         }
 
         //dequeue, this is where there is a param to check adopter's pref
+        /// <summary>
+        /// checks if the animal user is looking for is in shelter
+        /// </summary>
+        /// <param name="pref">what animal is the user searching for</param>
+        /// <returns>if the animal is in the shelter, returns the animal, else null</returns>
         public AnimalNode ShelterDequeue(Animal pref)
         {
             if (AnimalQueue1.Peek() == null && AnimalQueue2.Peek() == null) //shelter is empty
