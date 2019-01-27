@@ -23,6 +23,10 @@ namespace fifoAnimalShelter.Classes
         }
 
         //enqueue
+        /// <summary>
+        /// this will enqueue into a queue but with an animal object
+        /// </summary>
+        /// <param name="value">an animal object</param>
         public void Enqueue(Animal value)
         {
             if (Front == null) //if queue was empty and I add one
@@ -40,6 +44,10 @@ namespace fifoAnimalShelter.Classes
         }
 
         //dequeue
+        /// <summary>
+        /// this will dequeue from a queue, but just done with an animal object
+        /// </summary>
+        /// <returns>a node that has an onimal object</returns>
         public AnimalNode Dequeue()
         {
             //should add check if trying to dequeue from an empty queue
@@ -56,6 +64,10 @@ namespace fifoAnimalShelter.Classes
             }
         }
 
+        /// <summary>
+        /// peeks at the front of the queue
+        /// </summary>
+        /// <returns>the information of the node at the front of the queue</returns>
         public AnimalNode Peek()
         {
             return Front;
