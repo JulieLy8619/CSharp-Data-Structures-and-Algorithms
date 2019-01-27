@@ -31,13 +31,17 @@ namespace MultiBracketValidation
         }
 
         /// <summary>
-        /// 
+        /// this method will determine if there are balanced bracket matches 
         /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
+        /// <param name="input">a string</param>
+        /// <returns>a boolean</returns>
         public static bool MultiBracketValidation(string input)
         {
             CharStack bracketStack = new CharStack();
+            if (input == "")
+            {
+                return false;
+            }
             for (int i = 0; i <input.Length; i++)
             {
                 if (input[i] == '{' || input[i] == '[' || input[i] == '(')
