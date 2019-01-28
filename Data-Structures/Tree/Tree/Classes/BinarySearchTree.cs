@@ -25,22 +25,18 @@ namespace Tree.Classes
             //i assumed if there were duplicates I would default and add to the left
             if(addValue > root.Value && root.RightChild != null)
             {
-                Console.WriteLine("in while and more than");
                 Add(root.RightChild, addValue);
             }
             else if(addValue < root.Value && root.LeftChild != null)
             {
-                Console.WriteLine("in while and less than");
                 Add(root.LeftChild, addValue);
             }
             else if (addValue > root.Value && root.RightChild == null)
             {
-                Console.WriteLine("addvalue is more than root value" + addValue + " " + root.Value);
                 root.RightChild = new BinaryTreeNode(addValue);
             }
             else if (addValue <= root.Value && root.LeftChild == null)
             {
-                Console.WriteLine("addvalue is less than root value" + addValue + " " + root.Value);
                 root.LeftChild = new BinaryTreeNode(addValue);
             }
         }
