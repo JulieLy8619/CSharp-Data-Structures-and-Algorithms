@@ -93,9 +93,9 @@ namespace tree_unittesting
         public void TestPostorder1()
         {
             BinaryTreeNode node19 = new BinaryTreeNode(10);
-            BinaryTree testTree4 = new BinaryTree(node19);
+            BinaryTree testTree7 = new BinaryTree(node19);
             BinaryTreeNode[] answer7 = new BinaryTreeNode[5];
-            answer7 = testTree4.postOrder(testTree4.root);
+            answer7 = testTree7.postOrder(testTree7.root);
             Assert.Equal(10, answer7[0].Value); //should just have the 10 value
         }
         [Fact]
@@ -104,11 +104,11 @@ namespace tree_unittesting
             BinaryTreeNode node20 = new BinaryTreeNode(10);
             BinaryTreeNode node21 = new BinaryTreeNode(20);
             BinaryTreeNode node22 = new BinaryTreeNode(30);
-            BinaryTree testTree5 = new BinaryTree(node20);
-            testTree5.root.LeftChild = node21;
-            testTree5.root.RightChild = node22;
+            BinaryTree testTree8 = new BinaryTree(node20);
+            testTree8.root.LeftChild = node21;
+            testTree8.root.RightChild = node22;
             BinaryTreeNode[] answer8 = new BinaryTreeNode[5];
-            answer8 = testTree5.postOrder(testTree5.root); //answer should be 20 30 10
+            answer8 = testTree8.postOrder(testTree8.root); //answer should be 20 30 10
             Assert.Equal(30, answer8[1].Value);
         }
         [Fact]
@@ -119,17 +119,34 @@ namespace tree_unittesting
             BinaryTreeNode node25 = new BinaryTreeNode(30);
             BinaryTreeNode node26 = new BinaryTreeNode(40);
             BinaryTreeNode node27 = new BinaryTreeNode(50);
-            BinaryTree testTree6 = new BinaryTree(node23);
-            testTree6.root.LeftChild = node24;
-            testTree6.root.RightChild = node25;
-            testTree6.root.LeftChild.LeftChild = node26;
-            testTree6.root.LeftChild.RightChild = node27;
+            BinaryTree testTree9 = new BinaryTree(node23);
+            testTree9.root.LeftChild = node24;
+            testTree9.root.RightChild = node25;
+            testTree9.root.LeftChild.LeftChild = node26;
+            testTree9.root.LeftChild.RightChild = node27;
             BinaryTreeNode[] answer9 = new BinaryTreeNode[5];
-            answer9 = testTree6.postOrder(testTree6.root); //answer should be 40 50 20 30 10
+            answer9 = testTree9.postOrder(testTree9.root); //answer should be 40 50 20 30 10
             Assert.Equal(10, answer9[4].Value);
         }
 
         //add
+        [Fact]
+        public void TestBSTAdd1()
+        {
+            BinaryTreeNode node28 = new BinaryTreeNode(100);
+            BinarySearchTree testTree10 = new BinarySearchTree(node28);
+            testTree10.Add(testTree10.root, 50);
+            Assert.Equal(50, testTree10.root.LeftChild.Value); //should be 50 because it is less than 100
+        }
+        [Fact]
+        public void TestBSTAdd2()
+        {
+            BinaryTreeNode node28 = new BinaryTreeNode(100);
+            BinarySearchTree testTree11 = new BinarySearchTree(node28);
+            testTree11.Add(testTree11.root, 50);
+            testTree11.Add(testTree11.root, 75);
+            Assert.Equal(50, testTree11.root.LeftChild.RightChild.Value); //should be 75
+        }
 
         //contains
     }
