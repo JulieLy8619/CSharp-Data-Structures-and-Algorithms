@@ -7,6 +7,10 @@ namespace Tree.Classes
     public class BinarySearchTree
     {
         public BinaryTreeNode root { get; set; }
+        public BinarySearchTree()
+        {
+            root = null;
+        }
         public BinarySearchTree(BinaryTreeNode rootNode)
         {
             root = rootNode;

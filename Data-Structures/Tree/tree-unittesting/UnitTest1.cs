@@ -147,8 +147,44 @@ namespace tree_unittesting
             testTree11.Add(testTree11.root, 75);
             Assert.Equal(75, testTree11.root.LeftChild.RightChild.Value); //should be 75
         }
-
+        [Fact]
+        public void TestBSTAdd3()
+        {
+            BinaryTreeNode node28 = new BinaryTreeNode(100);
+            BinarySearchTree testTree11 = new BinarySearchTree(node28);
+            testTree11.Add(testTree11.root, 50);
+            testTree11.Add(testTree11.root, 75);
+            testTree11.Add(testTree11.root, 75);
+            Assert.Equal(75, testTree11.root.LeftChild.RightChild.LeftChild.Value); //should be 75
+        }
         //contains
+        [Fact]
+        public void TestBSTContains1()
+        {
+            BinaryTreeNode node29 = new BinaryTreeNode(100);
+            BinarySearchTree testTree12 = new BinarySearchTree(node29);
+            testTree12.Add(testTree12.root, 50);
+            testTree12.Add(testTree12.root, 75);
+            testTree12.Add(testTree12.root, 125);
+            Assert.True(testTree12.Contains(testTree12.root, 125)); //should be true
+        }
+        [Fact]
+        public void TestBSTContains2()
+        {
+            BinaryTreeNode node29 = new BinaryTreeNode(100);
+            BinarySearchTree testTree12 = new BinarySearchTree(node29);
+            testTree12.Add(testTree12.root, 50);
+            testTree12.Add(testTree12.root, 75);
+            testTree12.Add(testTree12.root, 125);
+            Assert.False(testTree12.Contains(testTree12.root, 25)); //should be false
+        }
+        [Fact]
+        public void TestBSTContains3()
+        {
+            //BinaryTreeNode node30 = new BinaryTreeNode(100);
+            BinarySearchTree testTree13 = new BinarySearchTree();
+            Assert.False(testTree13.Contains(testTree13.root, 25)); //null tree should return false
+        }
     }
 }
 
