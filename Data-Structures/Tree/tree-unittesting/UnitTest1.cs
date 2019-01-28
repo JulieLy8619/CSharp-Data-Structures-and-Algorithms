@@ -145,7 +145,7 @@ namespace tree_unittesting
             BinarySearchTree testTree11 = new BinarySearchTree(node28);
             testTree11.Add(testTree11.root, 50);
             testTree11.Add(testTree11.root, 75);
-            Assert.Equal(50, testTree11.root.LeftChild.RightChild.Value); //should be 75
+            Assert.Equal(75, testTree11.root.LeftChild.RightChild.Value); //should be 75
         }
 
         //contains

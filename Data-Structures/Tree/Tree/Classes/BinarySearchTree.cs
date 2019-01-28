@@ -18,49 +18,26 @@ namespace Tree.Classes
         /// <param name="addValue">value we want to add to tree</param>
         public void Add(BinaryTreeNode root, int addValue)
         {
-            while (root.LeftChild != null || root.RightChild != null)
+            //i assumed if there were duplicates I would default and add to the left
+            if(addValue > root.Value && root.RightChild != null)
             {
-                //if (addValue == root.Value && root.LeftChild == null)
-                //{
-                //    Console.WriteLine("addvalue is equal to root value and left is empty " + addValue + " " + root.Value);
-                //    root.LeftChild = new BinaryTreeNode(addValue);
-                //}
-                //else if (addValue == root.Value && root.LeftChild == null)
-                //{
-                //    Console.WriteLine("addvalue is equal to root value and right is empty " + addValue + " " + root.Value);
-                //    root.RightChild = new BinaryTreeNode(addValue);
-                //}
-                if(addValue > root.Value)
-                {
-                    Console.WriteLine("in while and more than");
-                    //infinite loop here
-                    Add(root.RightChild, addValue);
-                }
-                else if(addValue < root.Value)
-                {
-                    Console.WriteLine("in while and less than");
-                    Add(root.LeftChild, addValue);
-                }
-                //else if ()
-                //{
-                //    return;
-                //}
+                Console.WriteLine("in while and more than");
+                Add(root.RightChild, addValue);
             }
-            if (addValue > root.Value)
+            else if(addValue < root.Value && root.LeftChild != null)
+            {
+                Console.WriteLine("in while and less than");
+                Add(root.LeftChild, addValue);
+            }
+            else if (addValue > root.Value && root.RightChild == null)
             {
                 Console.WriteLine("addvalue is more than root value" + addValue + " " + root.Value);
                 root.RightChild = new BinaryTreeNode(addValue);
-                //return;
             }
-            else if (addValue < root.Value)
+            else if (addValue <= root.Value && root.LeftChild == null)
             {
                 Console.WriteLine("addvalue is less than root value" + addValue + " " + root.Value);
                 root.LeftChild = new BinaryTreeNode(addValue);
-                //return;
-            }
-            else if (root.LeftChild == null && root.RightChild == null)
-            {
-                return;
             }
         }
 
