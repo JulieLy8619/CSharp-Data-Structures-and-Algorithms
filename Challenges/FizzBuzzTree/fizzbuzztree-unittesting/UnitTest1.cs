@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using FizzBuzzTree.Classes;
 
 namespace fizzbuzztree_unittesting
 {
