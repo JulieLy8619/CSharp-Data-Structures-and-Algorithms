@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BreadthFirstTraversal.Classes
 {
-    class QueueForTrees
+    public class QueueForTrees
     {
         //properties
         public Node Front { get; set; }

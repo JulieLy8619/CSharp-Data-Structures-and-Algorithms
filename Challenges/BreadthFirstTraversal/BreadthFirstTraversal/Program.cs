@@ -13,7 +13,7 @@ namespace BreadthFirstTraversal
             treeNode1.LeftChild = new TreeNode(2);
             treeNode1.RightChild = new TreeNode(3);
             BreadthFirst(node1);
-            Console.WriteLine("out of breadthfirst");
+            //Console.WriteLine("out of breadthfirst");
             Console.ReadLine(); //to stop it from auto exit
         }
 
@@ -22,14 +22,7 @@ namespace BreadthFirstTraversal
             QueueForTrees methodQueue = new QueueForTrees();
 
             methodQueue.Enqueue(root.Value);
-            //if (root.Value.LeftChild != null)
-            //{
-            //    methodQueue.Enqueue(root.Value.LeftChild);
-            //}
-            //if (root.Value.RightChild != null)
-            //{
-            //    methodQueue.Enqueue(root.Value.RightChild);
-            //}
+
             while (methodQueue.Peek() != null)
             {
                 Console.WriteLine(methodQueue.Front.Value.Value);
