@@ -8,32 +8,39 @@ namespace BreadthFirstTraversal
         static void Main(string[] args)
         {
             //Console.WriteLine("Hello World!");
+            TreeNode treeNode1 = new TreeNode(1);
+            Node node1 = new Node(treeNode1);
+            treeNode1.LeftChild = new TreeNode(2);
+            treeNode1.RightChild = new TreeNode(3);
+            BreadthFirst(node1);
+            Console.WriteLine("out of breadthfirst");
+            Console.ReadLine(); //to stop it from auto exit
         }
 
-        public static void BreadthFirst(TreeNode root)
+        public static void BreadthFirst(Node root)
         {
             QueueForTrees methodQueue = new QueueForTrees();
 
             methodQueue.Enqueue(root.Value);
-            if (root.LeftChild != null)
+            //if (root.Value.LeftChild != null)
+            //{
+            //    methodQueue.Enqueue(root.Value.LeftChild);
+            //}
+            //if (root.Value.RightChild != null)
+            //{
+            //    methodQueue.Enqueue(root.Value.RightChild);
+            //}
+            while (methodQueue.Peek() != null)
             {
-                methodQueue.Enqueue(root.LeftChild.Value);
-            }
-            if (root.RightChild != null)
-            {
-                methodQueue.Enqueue(root.RightChild.Value);
-            }
-            while (methodQueue != null)
-            {
-                Console.WriteLine(root.Value);
-                TreeNode temp = methodQueue.Dequeue();
-                if (temp.LeftChild != null)
+                Console.WriteLine(methodQueue.Front.Value.Value);
+                Node temp = methodQueue.Dequeue();
+                if (temp.Value.LeftChild != null)
                 {
-                    methodQueue.Enqueue(temp.LeftChild.Value);
+                    methodQueue.Enqueue(temp.Value.LeftChild);
                 }
-                if (temp.RightChild != null)
+                if (temp.Value.RightChild != null)
                 {
-                    methodQueue.Enqueue(temp.RightChild.Value);
+                    methodQueue.Enqueue(temp.Value.RightChild);
                 }
             }
         }

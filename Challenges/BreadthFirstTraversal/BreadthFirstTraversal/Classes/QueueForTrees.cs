@@ -7,8 +7,8 @@ namespace BreadthFirstTraversal.Classes
     class QueueForTrees
     {
         //properties
-        public TreeNode Front { get; set; }
-        public TreeNode Rear { get; set; }
+        public Node Front { get; set; }
+        public Node Rear { get; set; }
 
         //instantiate
         //queue with nothing given
@@ -19,7 +19,7 @@ namespace BreadthFirstTraversal.Classes
         }
 
         //queue with a given node
-        public QueueForTrees(TreeNode node)
+        public QueueForTrees(Node node)
         {
             Front = node;
             Rear = node;
@@ -29,17 +29,17 @@ namespace BreadthFirstTraversal.Classes
         /// adding a node to the queue
         /// </summary>
         /// <param name="value">value of new node</param>
-        public void Enqueue(int value)
+        public void Enqueue(TreeNode value)
         {
             if (Front == null) //if queue was empty and I add one
             {
-                TreeNode newNode = new TreeNode(value);
+                Node newNode = new Node(value);
                 Rear = newNode;
                 Front = newNode;
             }
             else
             {
-                TreeNode newNode = new TreeNode(value);
+                Node newNode = new Node(value);
                 Rear.Next = newNode;
                 Rear = newNode;
             }
@@ -49,7 +49,7 @@ namespace BreadthFirstTraversal.Classes
         /// removes a node from the queue
         /// </summary>
         /// <returns>the first node in the queue</returns>
-        public TreeNode Dequeue()
+        public Node Dequeue()
         {
             //should add check if trying to dequeue from an empty queue
             if (Front == null)
@@ -58,7 +58,7 @@ namespace BreadthFirstTraversal.Classes
             }
             else
             {
-                TreeNode temp = Front;
+                Node temp = Front;
                 Front = Front.Next;
                 temp.Next = null;
                 return temp;
@@ -69,7 +69,7 @@ namespace BreadthFirstTraversal.Classes
         /// looks to see whos in front of the queue
         /// </summary>
         /// <returns>information on the first node in the queue</returns>
-        public TreeNode Peek()
+        public Node Peek()
         {
             return Front;
         }
