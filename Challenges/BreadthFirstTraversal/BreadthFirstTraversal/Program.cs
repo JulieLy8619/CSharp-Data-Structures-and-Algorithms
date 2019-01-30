@@ -17,6 +17,10 @@ namespace BreadthFirstTraversal
             Console.ReadLine(); //to stop it from auto exit
         }
 
+        /// <summary>
+        /// performs a breadth first traversal of a tree (meaning from top down and left to right
+        /// </summary>
+        /// <param name="root">Node that holds a treenode as its "value"</param>
         public static void BreadthFirst(Node root)
         {
             QueueForTrees methodQueue = new QueueForTrees();
