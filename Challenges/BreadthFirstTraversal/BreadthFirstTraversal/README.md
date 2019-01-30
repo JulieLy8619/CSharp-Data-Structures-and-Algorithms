@@ -10,8 +10,12 @@ For time, it was Big O(n) because we would walk through all the nodes.
 For space, it was Big O(w) where W is width, the width of the tree.
 
 ## Solution
-<!-- Embedded whiteboard image -->
+WhiteBoard: 
 ![CC17WhiteBoard](../../../assets/CodeChall17WB.jpg)
+Console: 
+![CC17WhiteBoard](../../../assets/CodeChall17Console.jpg)
+Tests:
+![CC17WhiteBoard](../../../assets/CodeChall17test.jpg)
 
 ## Contribuitor
 Partnered with Deziree Teague

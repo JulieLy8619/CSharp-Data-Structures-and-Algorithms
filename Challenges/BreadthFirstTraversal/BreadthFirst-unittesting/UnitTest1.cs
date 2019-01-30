@@ -86,6 +86,36 @@ namespace BreadthFirst_unittesting
 
         //peek
         //test for a null queue
+        [Fact]
+        public void TestPeek1()
+        {
+            TreeNode treeNode18 = new TreeNode(1);
+            TreeNode treeNode19 = new TreeNode(2);
+            Node node7 = new Node(treeNode18);
+            QueueForTrees newQueue7 = new QueueForTrees(node7);
+            newQueue7.Enqueue(treeNode19);
+            Node returnNode3 = newQueue7.Peek();
+            Assert.Equal(1, returnNode3.Value.Value);
+        }
+        [Fact]
+        public void TestPeek2()
+        {
+            QueueForTrees newQueue8 = new QueueForTrees();
+            Node returnNode4 = newQueue8.Peek();
+            Assert.Null(returnNode4);
+        }
+        [Fact]
+        public void TestPeek3()
+        {
+            TreeNode treeNode20 = new TreeNode(1);
+            TreeNode treeNode21 = new TreeNode(2);
+            Node node8 = new Node(treeNode20);
+            QueueForTrees newQueue9 = new QueueForTrees(node8);
+            newQueue9.Enqueue(treeNode21);
+            newQueue9.Dequeue();
+            Node returnNode5 = newQueue9.Peek();
+            Assert.Equal(2, returnNode5.Value.Value);
+        }
     }
 }
-//breadthfirst was a void method so i tech didn't need tests for it.
+//breadthfirst was a void method and it empties it's queue so I couldn't test it.
