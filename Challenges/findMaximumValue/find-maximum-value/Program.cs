@@ -24,7 +24,7 @@ namespace find_maximum_value
         public static int FindMaxValue(Node root)
         {
             QueueForTrees methodQueue = new QueueForTrees();
-            int maxValue = 0;
+            int maxValue = root.Value.Value;
 
             methodQueue.Enqueue(root.Value);
 

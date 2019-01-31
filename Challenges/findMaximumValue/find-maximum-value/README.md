@@ -15,9 +15,9 @@ For space, it was Big O(w) where W is width, the width of the tree.
 WhiteBoard: 
 ![CC18WhiteBoard](../../../assets/CodeChall18WB.jpg)
 Console: 
-
+![CC18Console](../../../assets/CodeChall18Happy.jpg)
 Tests:
-
+![CC18Tests](../../../assets/CodeChall18Tests.jpg)
 
 ## Contribuitor
 Partnered with Deziree Teague
