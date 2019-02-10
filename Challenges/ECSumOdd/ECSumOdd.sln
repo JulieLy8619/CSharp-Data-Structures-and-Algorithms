@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECSumOdd", "ECSumOdd\ECSumOdd.csproj", "{93DB4CB7-237E-4674-ADBF-3113E8174DA2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECSumOdd-unittesting", "ECSumOdd-unittesting\ECSumOdd-unittesting.csproj", "{B771DE2F-07C1-4672-BB03-C88F0BF839AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{93DB4CB7-237E-4674-ADBF-3113E8174DA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93DB4CB7-237E-4674-ADBF-3113E8174DA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93DB4CB7-237E-4674-ADBF-3113E8174DA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B771DE2F-07C1-4672-BB03-C88F0BF839AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B771DE2F-07C1-4672-BB03-C88F0BF839AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B771DE2F-07C1-4672-BB03-C88F0BF839AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B771DE2F-07C1-4672-BB03-C88F0BF839AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
