@@ -12,5 +12,5 @@ For Space, I used a Big O(w) where w is the width if the tree because I used the
 I utilized my Breadth First Traversal Libary so I wouldn't need to re-write the treenode or queue to handle tree nodes.
 
 ## Solution
-![ConsoleOutput](../../../assets/ECSumOddConsole.jpg)
-![TestsPass](../../../assets/ECSumOddTests.jpg)
+![ConsoleOutput](../../../assets/ECSumOddConsole.JPG)
+![TestsPass](../../../assets/ECSumOddTests.JPG)
