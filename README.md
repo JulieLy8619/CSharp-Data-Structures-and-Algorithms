@@ -14,7 +14,7 @@
 
 6. [Challenge: Linked LIst Merge](Challenges/ll_merge)
 
-7. [Data Structure: Stack and Queues](Data-Structures/Stack & Queues)
+7. [Data Structure: Stack and Queues](Data-Structures/Stack&Queues)
 
 8. [Challenge: Queues with Stacks](Challenges/QueuesWithStacks)
 
