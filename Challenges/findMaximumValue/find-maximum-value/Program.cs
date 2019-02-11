@@ -5,6 +5,10 @@ namespace find_maximum_value
 {
     public class Program
     {
+        /// <summary>
+        /// main program that calls other methods, runs to the console
+        /// </summary>
+        /// <param name="args">the default params to work</param>
         static void Main(string[] args)
         {
             Console.WriteLine("This is the tree: ");
@@ -20,6 +24,11 @@ namespace find_maximum_value
             Console.ReadLine(); // to stop it from uto quitting
         }
 
+        /// <summary>
+        /// finds the max value in a tree
+        /// </summary>
+        /// <param name="root">the tree</param>
+        /// <returns>the max value of the tree</returns>
         public static int FindMaxValue(TreeNode root)
         {
             QueueForTrees methodQueue = new QueueForTrees();
