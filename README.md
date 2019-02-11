@@ -8,16 +8,30 @@
 
 3. [Challenge: Array Binary Search](Challenges/BinarySearch)
 
-4. [Challenge: Linked Lists](Data-Structures/linked_list)
+4. [Data Structure: Linked Lists](Data-Structures/linked_list)
 
 5. [Challenge: Kth value from end of Linked List](Challenges/linkedlistKFromEnd)
 
-6. [Challenge: TBD](Challenges/)
+6. [Challenge: Linked LIst Merge](Challenges/ll_merge)
 
-7. [Challenge: TBD](Challenges/)
+7. [Data Structure: TBD](Data-Structures/Stack & Queues)
 
-8. [Challenge: TBD](Challenges/)
+8. [Challenge: Queues with Stacks](Challenges/QueuesWithStacks)
 
-9. [Challenge: TBD](Challenges/)
+9. [Challenge: Fifo Animal Shelter](Challenges/FifoAnimalShelter)
 
-EC. [Extra Credit: Fibonacci](Challenges/ECFibonacci)
+10. [Challenge: Multi Bracket Validtion](Challenges/MultiBracketValidation)
+
+11. [Data Structure: Tree](Data-Structures/tree)
+
+12. [Challenge: FizzBuzz Tree](Challenges/FizzBuzzTree)
+
+13. [Challenge: Breadth First Traversal](Challenges/BreadthFirstTraversal)
+
+14. [Challenge: Find Max Value](Challenges/findMaximumValue)
+
+15. [Challenge: TBD](Challenges/)
+
+EC 1. [Extra Credit: Fibonacci](Challenges/ECFibonacci)
+
+EC 2. [Extra Credit: Sum Odd](Challenges/ECSumOdd)
