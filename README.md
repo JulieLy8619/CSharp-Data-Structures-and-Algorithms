@@ -30,7 +30,10 @@
 
 14. [Challenge: Find Max Value](Challenges/findMaximumValue)
 
-15. [Challenge: TBD](Challenges/)
+15. Challenge: Snow Day
+15a. [Challenge: Find Binary Tree Height](Challenges/TreeHeight)
+15b. [Challenge: Check Ancestory](Challenges/AncestorInTree)
+15c. [Challenge: Check String Has Unique Characters](Challenges/AreCharaUnique)
 
 EC 1. [Extra Credit: Fibonacci](Challenges/ECFibonacci)
 
