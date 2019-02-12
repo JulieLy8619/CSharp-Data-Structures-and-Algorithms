@@ -24,6 +24,13 @@ namespace AncestoryInTree
             Console.ReadLine(); // to stop it from auto quitting
         }
 
+        /// <summary>
+        /// determines if a value is an ancestor of another value in a binary tree
+        /// </summary>
+        /// <param name="A">is this an ancestor</param>
+        /// <param name="B">this is the one we are checking if A was an ancestor</param>
+        /// <param name="root">the binary tree</param>
+        /// <returns></returns>
         public static bool IsAncestor(int A, int B, TreeNode root)
         {
             QueueForTrees methodQ = new QueueForTrees();
