@@ -14,7 +14,7 @@ namespace TreeHeight_unittesting
             TreeNode testTreeNode1 = new TreeNode(100);
             testTreeNode1.LeftChild = new TreeNode(200);
             testTreeNode1.RightChild = new TreeNode(1);
-            int answer1 = Program.FindTreeHeight(testTreeNode1);
+            int answer1 = Program.CalculateBinaryTreeHeight(testTreeNode1);
             Assert.Equal(1, answer1);
         }
 
@@ -30,7 +30,7 @@ namespace TreeHeight_unittesting
             testTreeNode2.RightChild = new TreeNode(1);
             testTreeNode2.RightChild.LeftChild = new TreeNode(5);
             testTreeNode2.RightChild.LeftChild.LeftChild = new TreeNode(50);
-            int answer2 = Program.FindTreeHeight(testTreeNode2);
+            int answer2 = Program.CalculateBinaryTreeHeight(testTreeNode2);
             Assert.Equal(3, answer2);
         }
 
@@ -39,7 +39,7 @@ namespace TreeHeight_unittesting
         public void TestNoChildrenCaseHeight()
         {
             TreeNode testTreeNode3 = new TreeNode(100);
-            int answer3 = Program.FindTreeHeight(testTreeNode3);
+            int answer3 = Program.CalculateBinaryTreeHeight(testTreeNode3);
             Assert.Equal(0, answer3);
         }
 
