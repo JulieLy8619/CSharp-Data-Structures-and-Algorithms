@@ -58,11 +58,22 @@ namespace TreeHeight
         //}
 
         //because amanda wanted to see it done recursively
+        /// <summary>
+        /// determines the height of a binary tree
+        /// </summary>
+        /// <param name="root">takes in a tree root</param>
+        /// <returns>the height</returns>
         public static int CalculateBinaryTreeHeight(TreeNode root)
         {
             return CalculateBinaryTreeHeightHelper(root, 0);
         }
 
+        /// <summary>
+        /// determines the height of a binary tree
+        /// </summary>
+        /// <param name="root">the tree root</param>
+        /// <param name="count">the counter of "root" nodes </param>
+        /// <returns>the height</returns>
         public static int CalculateBinaryTreeHeightHelper(TreeNode root, int count)
         {
             int leftCount = count;
@@ -89,10 +100,10 @@ namespace TreeHeight
 
 
         /// <summary>
-        /// 
+        /// determines the level of a binary tree
         /// </summary>
-        /// <param name="root"></param>
-        /// <returns></returns>
+        /// <param name="root">the tree root</param>
+        /// <returns>the level</returns>
         public static int FindTreeLevel(TreeNode root)
         {
             QueueForTrees methodQ = new QueueForTrees();
