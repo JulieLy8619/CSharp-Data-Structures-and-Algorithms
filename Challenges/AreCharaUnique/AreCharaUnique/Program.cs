@@ -17,10 +17,10 @@ namespace AreCharaUnique
         }
 
         /// <summary>
-        /// 
+        /// determines if a string contains all unique characters
         /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
+        /// <param name="input">the string to evaluate</param>
+        /// <returns>true or false if it contains all uniques or not</returns>
         public static bool AreCharactersUnique(string input)
         {
             if (input.Length > 0)
