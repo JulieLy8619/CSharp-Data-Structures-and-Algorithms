@@ -17,4 +17,10 @@
     <ProjectReference Include="..\AncestoryInTree\AncestoryInTree.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="BreadthFirstTraversal">
+      <HintPath>..\..\BreadthFirstTraversal\BreadthFirstTraversal\bin\Debug\netcoreapp2.2\BreadthFirstTraversal.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

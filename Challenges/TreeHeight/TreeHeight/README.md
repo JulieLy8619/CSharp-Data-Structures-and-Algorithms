@@ -13,8 +13,8 @@ For space, it was Big O(w) where W is width, the width of the tree.
 
 ## Solution
 WhiteBoard: 
-![CC18WhiteBoard](../../../assets/SnowDayCCTreeHeightWB.jpg)
+![SnowDayTreeHeightWhiteBoard](../../../assets/SnowDayCCTreeHeightWB.jpg)
 Console: 
-![CC18Console](../../../assets/SnowDayCCTreeHeightConsole.JPG)
+![SnowDayTreeHeightConsole](../../../assets/SnowDayCCTreeHeightConsole.JPG)
 Tests:
-![CC18Tests](../../../assets/SnowDayCCTreeHeightTests.JPG)
+![SnowDayTreeHeightTests](../../../assets/SnowDayCCTreeHeightTests.JPG)
