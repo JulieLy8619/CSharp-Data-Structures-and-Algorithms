@@ -6,7 +6,7 @@ I chose to try doing this recursively. I shorten the string each time I passed t
 
 ## Approach & Efficiency
 For time, I used Big O(n) because iterate through the whole string.
-For space, I think I used Big O(n) because each call I created a new variable.
+For space, I used Big O(H) where H is the height of the stack because i used recursion.
 
 ## Solution
 WhiteBoard: 
