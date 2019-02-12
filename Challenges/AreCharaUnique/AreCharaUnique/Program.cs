@@ -2,7 +2,7 @@
 
 namespace AreCharaUnique
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -35,7 +35,6 @@ namespace AreCharaUnique
                 }
                 if (input != null)
                 {
-
                     shortenString = input.TrimStart(input[0]);
                 }
                 bool answer = AreCharactersUnique(shortenString);
@@ -43,7 +42,7 @@ namespace AreCharaUnique
             }
             else
             {
-                return true; //technically it is neither if it is null
+                return true; //technically it is neither if it is null but I need this to be true otherwise I don't ever return a true case
             }
         }
     }
