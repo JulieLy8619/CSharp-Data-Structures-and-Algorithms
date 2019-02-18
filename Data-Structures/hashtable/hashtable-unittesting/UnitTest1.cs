@@ -65,6 +65,85 @@ namespace hashtable_unittesting
         }
 
         //test KVNodeLinkList========================
+        //get head
+        [Fact]
+        public void TestGetHeadLL()
+        {
+            KVNodeLinkList testKVLL1 = new KVNodeLinkList();
+            Assert.Null(testKVLL1.Head);
+        }
+
+        //set head
+        [Fact]
+        public void TestSetHeadLL()
+        {
+            KVNode testNode10 = new KVNode("cat", "dog");
+            KVNodeLinkList testKVLL2 = new KVNodeLinkList();
+            testKVLL2.Head = testNode10;
+            Assert.Equal(testNode10, testKVLL2.Head);
+        }
+
+        //get current
+        [Fact]
+        public void TestGetCurrentLL()
+        {
+            KVNode testNode11 = new KVNode("cat", "dog");
+            KVNodeLinkList testKVLL3 = new KVNodeLinkList();
+            testKVLL3.Current = testNode11;
+            Assert.Equal(testNode11, testKVLL3.Current);
+        }
+
+        //set current
+        [Fact]
+        public void TestSetCurrentLL()
+        {
+            KVNode testNode12 = new KVNode("cat", "dog");
+            KVNode testNode13 = new KVNode("cat", "dog");
+            KVNodeLinkList testKVLL4 = new KVNodeLinkList();
+            testKVLL4.Current = testNode12;
+            testKVLL4.Current = testNode13;
+            Assert.Equal(testNode13, testKVLL4.Current);
+        }
+
+        //insert
+        [Fact]
+        public void TestLLInsert()
+        {
+            KVNodeLinkList testKVLL5 = new KVNodeLinkList();
+            testKVLL5.Insert("cat", "dog");
+            Assert.Equal("cat", testKVLL5.Head.Key);
+        }
+
+        //includes-true
+        [Fact]
+        public void TestLLIncludeTrue()
+        {
+            KVNodeLinkList testKVLL6 = new KVNodeLinkList();
+            testKVLL6.Insert("cat", "dog");
+            bool llAnswer1 = testKVLL6.Includes("cat");
+            Assert.True(llAnswer1);
+        }
+
+        //includes- false
+        [Fact]
+        public void TestLLIncludeFalse()
+        {
+            KVNodeLinkList testKVLL7 = new KVNodeLinkList();
+            testKVLL7.Insert("cat", "dog");
+            bool llAnswer2 = testKVLL7.Includes("Apple");
+            Assert.False(llAnswer2);
+        }
+
+        //append
+        [Fact]
+        public void TestLLAppend()
+        {
+            KVNodeLinkList testKVLL8 = new KVNodeLinkList();
+            testKVLL8.Insert("cat", "dog");
+            KVNode testNode14 = new KVNode("apple", "pear");
+            testKVLL8.Append(testNode14);
+            Assert.Equal("apple", testKVLL8.Head.Next.Key);
+        }
 
         //test Hashtable=============================
     }

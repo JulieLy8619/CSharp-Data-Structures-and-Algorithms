@@ -32,13 +32,13 @@ namespace HashTable.Classes
             {
                 while (Current.Next != null)
                 {
-                    if (Current.Value == key)
+                    if (Current.Key == key)
                     {
                         return true;
                     }
                     Current = Current.Next;
                 }
-                if (Current.Value == key)
+                if (Current.Key == key)
                 {
                     return true;
                 }
