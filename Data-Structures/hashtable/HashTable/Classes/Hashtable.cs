@@ -16,7 +16,11 @@ namespace HashTable.Classes
         }
 
         //methods
-        //add
+        /// <summary>
+        /// Adds a new key value pair to hash table
+        /// </summary>
+        /// <param name="key">the key</param>
+        /// <param name="value">the value</param>
         public void AddToHashTable(string key, string value)
         {
             int hashIndex = Hash(key);
@@ -33,7 +37,11 @@ namespace HashTable.Classes
             }
         }
 
-        //get
+        /// <summary>
+        /// Will find the value of the given key, in a hashtable
+        /// </summary>
+        /// <param name="key">the key</param>
+        /// <returns>the key's value</returns>
         public string GetFromHashTable(string key)
         {
             int hashIndex = Hash(key);
@@ -73,7 +81,11 @@ namespace HashTable.Classes
 
         }
 
-        //contains
+        /// <summary>
+        /// Will check if the key is in the hashtable
+        /// </summary>
+        /// <param name="key">the key</param>
+        /// <returns>true if it is, false if it is not</returns>
         public bool HashTableContains(string key)
         {
             int hashIndex = Hash(key);
@@ -87,7 +99,11 @@ namespace HashTable.Classes
             }
         }
 
-        //hash
+        /// <summary>
+        /// Will hash the key into a number that can be an index in the hashtable
+        /// </summary>
+        /// <param name="key">the key</param>
+        /// <returns>the index number</returns>
         public int Hash(string key)
         {
             int hashIndex = key.Length % 5;
@@ -97,8 +113,3 @@ namespace HashTable.Classes
     }
 }
 
-
-//add: takes in both the key and value.This method should hash the key, and add the key and value pair to the table, handling collisions as needed.
-//get: takes in the key and returns the value from the table.
-//contains: takes in the key and returns a boolean, indicating if the key exists in the table already.
-//hash: takes in an arbitrary key and returns an index in the collection.

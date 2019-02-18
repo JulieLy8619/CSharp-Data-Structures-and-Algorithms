@@ -14,6 +14,11 @@ namespace HashTable.Classes
             Head = null;
         }
 
+        /// <summary>
+        /// adds key value node to linked list
+        /// </summary>
+        /// <param name="key">key</param>
+        /// <param name="value">value</param>
         public void Insert(string key, string value)
         {
             KVNode node = new KVNode(key, value);
@@ -21,6 +26,11 @@ namespace HashTable.Classes
             Head = node;
         }
 
+        /// <summary>
+        /// checks if key is in linked list
+        /// </summary>
+        /// <param name="key">the key</param>
+        /// <returns>true if found, false otherwise</returns>
         public bool Includes(string key)
         {
             Current = Head;
@@ -46,7 +56,10 @@ namespace HashTable.Classes
                 return false;
             }
         }
-
+        /// <summary>
+        /// adds a node to the end of the linked list
+        /// </summary>
+        /// <param name="node">the node to add</param>
         public void Append(KVNode node)
         {
             Current = Head; 
