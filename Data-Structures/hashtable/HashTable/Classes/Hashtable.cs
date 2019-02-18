@@ -12,15 +12,86 @@ namespace HashTable.Classes
         //instantiation
         public Hashtable()
         {
-            HashTableArray = new KVNodeLinkList[10]; //choosing something small for testing purposes
+            HashTableArray = new KVNodeLinkList[5]; //choosing something small for testing purposes
         }
 
         //methods
-        public void Add(string key, string value)
+        //add
+        public void AddToHasTable(string key, string value)
         {
+            int hashIndex = Hash(key);
+            if (HashTableArray[hashIndex] == null)
+            {
+                HashTableArray[hashIndex].Insert(key, value);
+            }
+            else
+            {
+                KVNode newNode = new KVNode(key, value);
+                HashTableArray[hashIndex].Append(newNode);
+            }
+        }
+
+        //get
+        public string GetFromHashTable(string key)
+        {
+            int hashIndex = Hash(key);
+            if (HashTableArray[hashIndex] == null)
+            {
+                Console.WriteLine(key + " isn't in the HashTable");
+                return null;
+            }
+            else
+            {
+                if (HashTableArray[hashIndex].Includes(key) == true)
+                {
+                    while (HashTableArray[hashIndex].Current.Next != null)
+                    {
+                        if (HashTableArray[hashIndex].Current.Key == key)
+                        {
+                            return HashTableArray[hashIndex].Current.Value;
+                        }
+                        HashTableArray[hashIndex].Current = HashTableArray[hashIndex].Current.Next;
+                    }
+                    if (HashTableArray[hashIndex].Current.Key == key)
+                    {
+                        return HashTableArray[hashIndex].Current.Value;
+                    }
+                    else
+                    {
+                        Console.WriteLine(key + " isn't in the HashTable");
+                        return null;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine(key + " isn't in the HashTable");
+                    return null;
+                }
+            }
 
         }
 
+        //contains
+        public bool HashTableContains(string key)
+        {
+            int hashIndex = Hash(key);
+            if (HashTableArray[hashIndex].Includes(key) == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        //hash
+        public static int Hash(string key)
+        {
+            int hashIndex = key.Length % 5;
+            //Amanda said we're writing our own, she didn't say write a good one...
+            return hashIndex;
+        }
     }
 }
 

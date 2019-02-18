@@ -21,7 +21,7 @@ namespace HashTable.Classes
             Head = node;
         }
 
-        public bool Includes(KVNode node)
+        public bool Includes(string key)
         {
             Current = Head;
             if (Head == null)
@@ -32,13 +32,13 @@ namespace HashTable.Classes
             {
                 while (Current.Next != null)
                 {
-                    if (Current.Value == node.Value)
+                    if (Current.Value == key)
                     {
                         return true;
                     }
                     Current = Current.Next;
                 }
-                if (Current.Value == node.Value)
+                if (Current.Value == key)
                 {
                     return true;
                 }
