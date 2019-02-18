@@ -30,10 +30,15 @@ namespace insertionSort
             Console.ReadLine(); // to stop it from auto exit
         }
 
+        /// <summary>
+        /// sorts an array using insertion sort
+        /// </summary>
+        /// <param name="arr">an array</param>
+        /// <returns>a sorted array</returns>
         public static int[] InsertionSort(int[] arr)
         {
             //int[] returnArr = new int[arr.Length];
-            for (int i = 0; i < arr.Length; i++)
+            for (int i = 1; i < arr.Length; i++)
             {
                 int counter = i - 1;
                 int currentVal = arr[i];
