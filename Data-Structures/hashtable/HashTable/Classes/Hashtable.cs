@@ -7,7 +7,7 @@ namespace HashTable.Classes
     public class Hashtable
     {
         //properties
-        KVNodeLinkList[] HashTableArray { get; set; }
+        public KVNodeLinkList[] HashTableArray { get; set; }
 
         //instantiation
         public Hashtable()
@@ -17,11 +17,13 @@ namespace HashTable.Classes
 
         //methods
         //add
-        public void AddToHasTable(string key, string value)
+        public void AddToHashTable(string key, string value)
         {
             int hashIndex = Hash(key);
             if (HashTableArray[hashIndex] == null)
             {
+                KVNodeLinkList tempLL = new KVNodeLinkList();
+                HashTableArray[hashIndex] = tempLL;
                 HashTableArray[hashIndex].Insert(key, value);
             }
             else
@@ -86,7 +88,7 @@ namespace HashTable.Classes
         }
 
         //hash
-        public static int Hash(string key)
+        public int Hash(string key)
         {
             int hashIndex = key.Length % 5;
             //Amanda said we're writing our own, she didn't say write a good one...

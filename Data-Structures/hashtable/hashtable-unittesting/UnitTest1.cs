@@ -146,13 +146,34 @@ namespace hashtable_unittesting
         }
 
         //test Hashtable=============================
+        //Adding a key/value to your hashtable results in the value being in the data structure
+        [Fact]
+        public void TestHashTableAdd()
+        {
+            Hashtable testHashTable1 = new Hashtable();
+            testHashTable1.AddToHashTable("cat", "dog");
+            Assert.Equal("cat", testHashTable1.HashTableArray[3].Head.Key);
+        }
+
+        //Retrieving based on a key returns the value stored
+
+        //Successfully returns null for a key that does not exist in the hashtable
+
+        //Successfully handle a collision within the hashtable
+
+        //Successfully retrieve a value from a bucket within the hashtable that has a collision
+
+        //Successfully hash a key to an in-range value
+        [Fact]
+        public void TestHashIndexNumber()
+        {
+            Hashtable testHashTable1 = new Hashtable();
+            int htAnswer1 = testHashTable1.Hash("a");
+            Assert.Equal(1, htAnswer1);
+        }
+
+
     }
 }
 
 
-//Adding a key/value to your hashtable results in the value being in the data structure
-//Retrieving based on a key returns the value stored
-//Successfully returns null for a key that does not exist in the hashtable
-//Successfully handle a collision within the hashtable
-//Successfully retrieve a value from a bucket within the hashtable that has a collision
-//Successfully hash a key to an in-range value
