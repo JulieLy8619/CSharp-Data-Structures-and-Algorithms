@@ -8,7 +8,10 @@ namespace repeatedWord
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string input = "Test sentence. things things";
+            string answer = RepeatedWord(input);
+            Console.WriteLine(answer);
+            Console.ReadLine(); //just to stop it from auto quit
         }
 
         
@@ -23,20 +26,19 @@ namespace repeatedWord
             //hashes each word from the array
             foreach (var item in strArr)
             {
-                hTable.AddToHashTable(item, item); //i want the value to be the same as the key for this
-            }
+                if (hTable.HashTableArray[hTable.Hash(item)] == null)
+                {
+                    hTable.AddToHashTable(item, item); //i want the value to be the same as the key for this
+                } 
+                else if(hTable.HashTableContains(item) == true)
+                {
+                    return item;
+                }
 
-            //looks for collison, if collison then check value then return
-            if ()
-            {
-
             }
-            else
-            {
-                Console.WriteLine("There were no duplicate words in this string");
-                return null;
-            }
-
+            //means went through all the words and didn't find a collision therefore returning and exiting before this point, so no duplicates
+            Console.WriteLine("There were no duplicate words in this string");
+            return null;
         }
     }
 }
