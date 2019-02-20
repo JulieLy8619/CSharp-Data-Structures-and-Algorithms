@@ -6,6 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Reference Include="BreadthFirstTraversal">
+      <HintPath>..\..\BreadthFirstTraversal\BreadthFirstTraversal\bin\Debug\netcoreapp2.2\BreadthFirstTraversal.dll</HintPath>
+    </Reference>
     <Reference Include="HashTable">
       <HintPath>..\..\..\Data-Structures\hashtable\HashTable\bin\Debug\netcoreapp2.2\HashTable.dll</HintPath>
     </Reference>
