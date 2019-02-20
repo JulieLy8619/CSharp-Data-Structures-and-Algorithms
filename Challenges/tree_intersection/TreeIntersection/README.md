@@ -10,6 +10,12 @@ Then I would iterate through the other tree (still using Breadth) and checked if
 Finally I returned the array.
 The way I chose to do this, I have Big O(N) for time because I would iterate through everything, and space has a Big(N) because worst case I need to add memory for each node because they are the same tree
 
+<!--
+Comment the DLLs I brought in and why
+Tree dll so can handle trees
+breadth first dll so can do breadth first traversal
+-->
+
 ## Solution
 Here is my whiteboard for this challenge.
 ![treeintersectionWhiteBoard](../../../assets/TreeIntersectionWB.jpg)
