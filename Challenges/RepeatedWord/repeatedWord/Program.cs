@@ -23,6 +23,12 @@ namespace repeatedWord
             string answer3 = RepeatedWord(input3);
             Console.WriteLine("The answer is: " + answer3);
 
+            
+            string input4 = "It was the best of times, it was the worst of times";
+            Console.WriteLine("The string is: " + input4);
+            string answer4 = RepeatedWord(input4);
+            Console.WriteLine("The answer is: " + answer4);
+
             Console.ReadLine(); //just to stop it from auto quit
         }
 
@@ -38,11 +44,11 @@ namespace repeatedWord
             //hashes each word from the array
             foreach (var item in strArr)
             {
-                if (hTable.HashTableArray[hTable.Hash(item)] == null || hTable.HashTableArray[hTable.Hash(item)].Head.Key == "")
+                if (hTable.HashTableArray[hTable.Hash(item.ToUpper())] == null || hTable.HashTableArray[hTable.Hash(item.ToUpper())].Head.Key == "")
                 {
-                    hTable.AddToHashTable(item, item); //i want the value to be the same as the key for this
+                    hTable.AddToHashTable(item.ToUpper(), item.ToUpper()); //i want the value to be the same as the key for this
                 } 
-                else if(hTable.HashTableContains(item) == true)
+                else if(hTable.HashTableContains(item.ToUpper()) == true)
                 {
                     return item;
                 }
