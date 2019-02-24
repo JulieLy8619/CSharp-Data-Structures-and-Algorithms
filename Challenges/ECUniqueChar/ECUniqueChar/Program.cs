@@ -20,6 +20,11 @@ namespace ECUniqueChar
             Console.ReadLine(); //so it doesn't auto quit
         }
 
+        /// <summary>
+        /// determines if a string has unique characters in it, excluding spaces and isn't case sensative.
+        /// </summary>
+        /// <param name="input">the string to evaluate</param>
+        /// <returns>true if all unique, else false</returns>
         public static bool UniqueChara(string input)
         {
             Hashtable ht = new Hashtable();
