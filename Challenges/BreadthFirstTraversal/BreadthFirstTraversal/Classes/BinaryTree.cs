@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BreadthFirstTraversal.Classes
 {
-    class BinaryTree
+    public class BinaryTree
     {
         public int counter = 0;
         public TreeNode root { get; set; }

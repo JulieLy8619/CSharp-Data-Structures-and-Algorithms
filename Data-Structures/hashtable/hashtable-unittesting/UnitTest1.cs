@@ -230,7 +230,24 @@ namespace hashtable_unittesting
             Assert.Equal(97, htAnswer9);
         }
 
+        //testing contains
+        [Fact]
+        public void TestHashContainsPass()
+        {
+            Hashtable testHashTable10 = new Hashtable();
+            testHashTable10.AddToHashTable("cat", "dog");
+            bool htAnswer10 = testHashTable10.HashTableContains("cat");
+            Assert.True(htAnswer10);
+        }
 
+        [Fact]
+        public void TestHashContainsFail()
+        {
+            Hashtable testHashTable11 = new Hashtable();
+            testHashTable11.AddToHashTable("cat", "dog");
+            bool htAnswer11 = testHashTable11.HashTableContains("apple");
+            Assert.False(htAnswer11);
+        }
     }
 }
 

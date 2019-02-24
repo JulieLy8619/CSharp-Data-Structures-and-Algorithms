@@ -89,7 +89,11 @@ namespace HashTable.Classes
         public bool HashTableContains(string key)
         {
             int hashIndex = Hash(key);
-            if (HashTableArray[hashIndex].Includes(key) == true)
+            if (HashTableArray[hashIndex] == null)
+            {
+                return false;
+            }
+            else if (HashTableArray[hashIndex].Includes(key) == true)
             {
                 return true;
             }
