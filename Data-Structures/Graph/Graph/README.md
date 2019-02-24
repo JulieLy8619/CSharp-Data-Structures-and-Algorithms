@@ -1,11 +1,19 @@
 # Graphs
+Graphs are 
 <!-- Short summary or background information -->
 
 ## Challenge
-<!-- Description of the challenge -->
+We were asked to create a class for graphs represented as adjacency lists. 
+
 
 ## Approach & Efficiency
+I utilized
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## API
-<!-- Description of each method publicly available in your Graph -->
+The abilities of this class are: 
+- AddNode: adds a node to the graph
+- AddEdge: adds an edge between two nodes
+- GetNodes: returns all the nodes in the graph
+- GetNeighbors: returns the neighbors of a node
+- Size: returns the number of nodes in the graph
