@@ -24,13 +24,14 @@ namespace ECUniqueChar
         {
             Hashtable ht = new Hashtable();
             string temp = "";
+            string inputToUpper = input.ToUpper();
             if (input.Length == 0)
             {
                 return false; //technically no chara is and isn't uniqueu chara, i chose false
             }
             for (int i = 0; i < input.Length; i++)
             {
-                temp = input[i].ToString();
+                temp = inputToUpper[i].ToString();
                 if (ht.HashTableContains(temp) == true)
                 {
                     return false; //means duplicate
