@@ -43,6 +43,12 @@ namespace TreeIntersection
             Console.ReadLine(); //so it doesn't auto quit
         }
 
+        /// <summary>
+        /// Compares two trees and itentify where they shares the same values
+        /// </summary>
+        /// <param name="root1">one tree</param>
+        /// <param name="root2">second tree</param>
+        /// <returns>a list of the values the two trees share</returns>
         public static List<int> TreeIntersection(BinaryTree root1, BinaryTree root2)
         {
             QueueForTrees algoQueue = new QueueForTrees();
