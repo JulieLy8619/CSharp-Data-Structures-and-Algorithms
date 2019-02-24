@@ -1,5 +1,5 @@
 # Graphs
-Graphs are 
+Graphs are non linear data structures that I will make up out of nodes.
 <!-- Short summary or background information -->
 
 ## Challenge
