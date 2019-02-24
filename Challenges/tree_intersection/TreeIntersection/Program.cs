@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace TreeIntersection
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -50,6 +50,11 @@ namespace TreeIntersection
             List<int> returnAnswer = new List<int>();
             string valForHT = "";
             bool comparison;
+
+            if (root1 == null || root2 ==null)
+            {
+                return returnAnswer;
+            }
 
             TreeNode algoQT1Node = root1.root;
             algoQueue.Enqueue(algoQT1Node);
