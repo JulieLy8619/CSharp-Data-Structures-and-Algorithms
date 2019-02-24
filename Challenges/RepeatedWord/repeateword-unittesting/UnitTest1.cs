@@ -68,14 +68,14 @@ namespace repeateword_unittesting
         {
             Hashtable testHashTable1 = new Hashtable();
             testHashTable1.AddToHashTable("cat", "dog");
-            Assert.Equal("cat", testHashTable1.HashTableArray[3].Head.Key);
+            Assert.Equal("cat", testHashTable1.HashTableArray[312].Head.Key);
         }
         [Fact]
         public void TestHashTableAdd2()
         {
             Hashtable testHashTable2 = new Hashtable();
             testHashTable2.AddToHashTable("cat", "dog");
-            Assert.Equal("dog", testHashTable2.HashTableArray[3].Head.Value);
+            Assert.Equal("dog", testHashTable2.HashTableArray[312].Head.Value);
         }
 
         //Retrieving based on a key returns the value stored
