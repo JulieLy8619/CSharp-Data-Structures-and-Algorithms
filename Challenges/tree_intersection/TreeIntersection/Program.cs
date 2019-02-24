@@ -1,6 +1,7 @@
 ﻿using BreadthFirstTraversal.Classes;
 using HashTable.Classes;
 using System;
+using System.Collections.Generic;
 using Tree.Classes;
 
 namespace TreeIntersection
@@ -16,9 +17,22 @@ namespace TreeIntersection
         {
             QueueForTrees algoQueue = new QueueForTrees();
             Hashtable algoHashtable = new Hashtable();
-            int[] returnArray = new int[10]; //how know size, do i need resize logic then?
-            int indexCounter = 0;
-            algoQueue.Enqueue(root1);
+            List<int> returnAnswer = new List<int>();
+            TreeNode algoQTNode = new TreeNode(root1.root.Value);
+            algoQueue.Enqueue(algoQTNode);
+            while (algoQueue.Front != null)
+            {
+                Node temp = algoQueue.Dequeue();
+                if (temp.Value.LeftChild != null)
+                {
+                    algoQueue.Enqueue(temp.Value.LeftChild);
+                }
+                if (temp.Value.RightChild != null)
+                {
+                    algoQueue.Enqueue(temp.Value.RightChild);
+                }
+                algoHashtable.AddToHashTable(temp.Value.Value.ToString(), temp.Value.Value.ToString());
+            }
         }
     }
 }
