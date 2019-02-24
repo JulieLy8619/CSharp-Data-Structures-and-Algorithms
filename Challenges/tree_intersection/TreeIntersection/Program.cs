@@ -13,16 +13,18 @@ namespace TreeIntersection
             Console.WriteLine("Hello World!");
         }
 
-        public int[] TreeIntersection(BinaryTree root1, BinaryTree root2)
+        public List<int> TreeIntersection(BinaryTree root1, BinaryTree root2)
         {
             QueueForTrees algoQueue = new QueueForTrees();
             Hashtable algoHashtable = new Hashtable();
             List<int> returnAnswer = new List<int>();
-            TreeNode algoQTNode = new TreeNode(root1.root.Value);
-            algoQueue.Enqueue(algoQTNode);
+
+            TreeNode algoQT1Node = new TreeNode(root1.root.Value);
+            algoQueue.Enqueue(algoQT1Node);
             while (algoQueue.Front != null)
             {
                 Node temp = algoQueue.Dequeue();
+                algoHashtable.AddToHashTable(temp.Value.Value.ToString(), temp.Value.Value.ToString());
                 if (temp.Value.LeftChild != null)
                 {
                     algoQueue.Enqueue(temp.Value.LeftChild);
@@ -31,8 +33,28 @@ namespace TreeIntersection
                 {
                     algoQueue.Enqueue(temp.Value.RightChild);
                 }
-                algoHashtable.AddToHashTable(temp.Value.Value.ToString(), temp.Value.Value.ToString());
             }
+            //can re-use the queue because it wouldn't exit above while loop until it was empty
+            TreeNode algoQT2Node = new TreeNode(root2.root.Value);
+            algoQueue.Enqueue(algoQT2Node);
+            while (algoQueue.Front != null)
+            {
+                Node temp = algoQueue.Dequeue();
+                if (algoHashtable.HashTableContains(temp.Value.Value.ToString()) == true)
+                {
+                    returnAnswer.Add(temp.Value.Value);
+                }
+                if (temp.Value.LeftChild != null)
+                {
+                    algoQueue.Enqueue(temp.Value.LeftChild);
+                }
+                if (temp.Value.RightChild != null)
+                {
+                    algoQueue.Enqueue(temp.Value.RightChild);
+                }
+                
+            }
+            return returnAnswer;
         }
     }
 }
