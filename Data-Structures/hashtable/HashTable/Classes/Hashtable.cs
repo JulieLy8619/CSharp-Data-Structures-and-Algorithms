@@ -12,7 +12,7 @@ namespace HashTable.Classes
         //instantiation
         public Hashtable()
         {
-            HashTableArray = new KVNodeLinkList[5]; //choosing something small for testing purposes
+            HashTableArray = new KVNodeLinkList[1024]; 
         }
 
         //methods
@@ -89,7 +89,11 @@ namespace HashTable.Classes
         public bool HashTableContains(string key)
         {
             int hashIndex = Hash(key);
-            if (HashTableArray[hashIndex].Includes(key) == true)
+            if (HashTableArray[hashIndex] == null)
+            {
+                return false;
+            }
+            else if (HashTableArray[hashIndex].Includes(key) == true)
             {
                 return true;
             }
@@ -106,8 +110,13 @@ namespace HashTable.Classes
         /// <returns>the index number</returns>
         public int Hash(string key)
         {
-            int hashIndex = key.Length % 5;
-            //Amanda said we're writing our own, she didn't say write a good one...
+            int hashIndex = 0;
+            byte[] ASCIIValues = Encoding.ASCII.GetBytes(key);
+            for (int i = 0; i < ASCIIValues.Length; i++)
+            {
+                hashIndex = hashIndex + ASCIIValues[i];
+            }
+            hashIndex = hashIndex % 1024;
             return hashIndex;
         }
     }

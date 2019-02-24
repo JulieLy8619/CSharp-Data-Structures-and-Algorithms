@@ -152,14 +152,14 @@ namespace hashtable_unittesting
         {
             Hashtable testHashTable1 = new Hashtable();
             testHashTable1.AddToHashTable("cat", "dog");
-            Assert.Equal("cat", testHashTable1.HashTableArray[3].Head.Key);
+            Assert.Equal("cat", testHashTable1.HashTableArray[312].Head.Key);
         }
         [Fact]
         public void TestHashTableAdd2()
         {
             Hashtable testHashTable2 = new Hashtable();
             testHashTable2.AddToHashTable("cat", "dog");
-            Assert.Equal("dog", testHashTable2.HashTableArray[3].Head.Value);
+            Assert.Equal("dog", testHashTable2.HashTableArray[312].Head.Value);
         }
 
         //Retrieving based on a key returns the value stored
@@ -218,19 +218,36 @@ namespace hashtable_unittesting
         [Fact]
         public void TestHashIndexNumber1()
         {
-            Hashtable testHashTable1 = new Hashtable();
-            int htAnswer1 = testHashTable1.Hash("a");
-            Assert.Equal(1, htAnswer1);
+            Hashtable testHashTable8 = new Hashtable();
+            int htAnswer8 = testHashTable8.Hash("a");
+            Assert.Equal(97, htAnswer8);
         }
         [Fact]
         public void TestHashIndexNumber2()
         {
-            Hashtable testHashTable11 = new Hashtable();
-            int htAnswer11 = testHashTable11.Hash("abcdef");
-            Assert.Equal(1, htAnswer11);
+            Hashtable testHashTable9 = new Hashtable();
+            int htAnswer9 = testHashTable9.Hash("}}}}}}}}y");
+            Assert.Equal(97, htAnswer9);
         }
 
+        //testing contains
+        [Fact]
+        public void TestHashContainsPass()
+        {
+            Hashtable testHashTable10 = new Hashtable();
+            testHashTable10.AddToHashTable("cat", "dog");
+            bool htAnswer10 = testHashTable10.HashTableContains("cat");
+            Assert.True(htAnswer10);
+        }
 
+        [Fact]
+        public void TestHashContainsFail()
+        {
+            Hashtable testHashTable11 = new Hashtable();
+            testHashTable11.AddToHashTable("cat", "dog");
+            bool htAnswer11 = testHashTable11.HashTableContains("apple");
+            Assert.False(htAnswer11);
+        }
     }
 }
 
