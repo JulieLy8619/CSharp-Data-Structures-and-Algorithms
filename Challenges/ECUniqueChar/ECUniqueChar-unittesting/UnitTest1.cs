@@ -12,3 +12,9 @@ namespace ECUniqueChar_unittesting
         }
     }
 }
+
+
+//test caps
+//test happy case unique
+//test happy fail that there is duplicate
+//test empty string
