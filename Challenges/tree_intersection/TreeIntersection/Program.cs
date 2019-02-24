@@ -36,7 +36,7 @@ namespace TreeIntersection
 
             //run it through method
             List<int> consoleAnswer = TreeIntersection(tree1, tree2);
-            Console.WriteLine("returned answer is" + consoleAnswer);
+            Console.WriteLine("returned answer is");
             Console.WriteLine(consoleAnswer[0]);
             Console.WriteLine(consoleAnswer[1]);
 
@@ -49,7 +49,7 @@ namespace TreeIntersection
             Hashtable algoHashtable = new Hashtable();
             List<int> returnAnswer = new List<int>();
             string valForHT = "";
-            string comparison;
+            bool comparison;
 
             TreeNode algoQT1Node = root1.root;
             algoQueue.Enqueue(algoQT1Node);
@@ -73,8 +73,8 @@ namespace TreeIntersection
             {
                 Node temp = algoQueue.Dequeue();
                 valForHT = temp.Value.Value.ToString();
-                comparison = algoHashtable.GetFromHashTable(valForHT);
-                if (comparison != null)
+                comparison = algoHashtable.HashTableContains(valForHT);
+                if (comparison == true)
                 {
                     returnAnswer.Add(temp.Value.Value);
                 }
