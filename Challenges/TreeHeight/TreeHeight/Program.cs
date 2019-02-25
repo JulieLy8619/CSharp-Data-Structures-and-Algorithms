@@ -11,11 +11,13 @@ namespace TreeHeight
             //put in tree and print it here
             TreeNode treeNode1 = new TreeNode(8);
             treeNode1.LeftChild = new TreeNode(200);
+            treeNode1.LeftChild.RightChild = new TreeNode(10);
             treeNode1.RightChild = new TreeNode(6);
             treeNode1.RightChild.LeftChild = new TreeNode(5);
             treeNode1.RightChild.LeftChild.LeftChild = new TreeNode(50);
             Console.WriteLine("root value: " + treeNode1.Value);
             Console.WriteLine("Left child value: " + treeNode1.LeftChild.Value);
+            Console.WriteLine("Left child's right value: " + treeNode1.LeftChild.RightChild.Value);
             Console.WriteLine("Right child value: " + treeNode1.RightChild.Value);
             Console.WriteLine("Right child's lefts value: " + treeNode1.RightChild.LeftChild.Value);
             Console.WriteLine("Right child's left's left value: " + treeNode1.RightChild.LeftChild.LeftChild.Value);
