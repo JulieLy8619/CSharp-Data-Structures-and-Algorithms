@@ -9,6 +9,11 @@ namespace Graph.Classes
         //list of link list of graphnodes
         public List<GraphNode> AdjList = new List<GraphNode>();
 
+        /// <summary>
+        /// adds a node to the "graph"
+        /// </summary>
+        /// <param name="value">value of the new node</param>
+        /// <returns>the new node</returns>
         public GraphNode AddNode(int value)
         {
             GraphNode newNode = new GraphNode(value);
@@ -25,16 +30,21 @@ namespace Graph.Classes
             }
         }
 
-        public void AddEdge(GraphNode node1, GraphNode node2, int? node1Weight, int? node2Weight)
+        /// <summary>
+        /// adds an edge between 2 nodes
+        /// </summary>
+        /// <param name="node1">first node for edge connection</param>
+        /// <param name="node2">second node for edge connection</param>
+        /// <param name="node1Weight">option weight of the connection</param>
+        /// <param name="node2Weight"></param>
+        public void AddEdge(GraphNode node1, GraphNode node2, int? edgeWeight)
         {
             //add weights to nodes
-            if (node1Weight != null)
+            //I don't think this is right, I think it was supposed to be tuples...
+            if (edgeWeight != null)
             {
-                node1.EdgeWeight = node1Weight;
-            }
-            if (node2Weight != null)
-            {
-                node2.EdgeWeight = node2Weight;
+                node1.EdgeWeight = edgeWeight;
+                node2.EdgeWeight = edgeWeight;
             }
 
             if (AdjList.Contains(node1) == false) //it isn't in the table
@@ -87,11 +97,20 @@ namespace Graph.Classes
             }
         }
 
+        /// <summary>
+        /// gets the graph nodes
+        /// </summary>
+        /// <returns>all the nodes</returns>
         public List<GraphNode> GetNodes()
         {
             return AdjList;
         }
 
+        /// <summary>
+        /// gets the neighbors of a node
+        /// </summary>
+        /// <param name="node">which node you want to know it's neighbors</param>
+        /// <returns>the neightbors of the given node (in linkedlist form)</returns>
         public GraphNode GetNeighbors(GraphNode node)
         {
             if (AdjList.Count == 0) //empty graph
@@ -115,6 +134,10 @@ namespace Graph.Classes
             }
         }
 
+        /// <summary>
+        /// finds how many nodes are in the graph
+        /// </summary>
+        /// <returns>the nuber of nodes in the graph</returns>
         public int Size()
         {
             return AdjList.Count;
