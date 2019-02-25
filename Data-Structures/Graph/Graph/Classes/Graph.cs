@@ -25,8 +25,18 @@ namespace Graph.Classes
             }
         }
 
-        public void AddEdge(GraphNode node1, GraphNode node2)
+        public void AddEdge(GraphNode node1, GraphNode node2, int? node1Weight, int? node2Weight)
         {
+            //add weights to nodes
+            if (node1Weight != null)
+            {
+                node1.EdgeWeight = node1Weight;
+            }
+            if (node2Weight != null)
+            {
+                node2.EdgeWeight = node2Weight;
+            }
+
             if (AdjList.Contains(node1) == false) //it isn't in the table
             {
                 Console.WriteLine($"Node with value {node1.Value} isn't in the graph");
@@ -82,13 +92,26 @@ namespace Graph.Classes
             return AdjList;
         }
 
-        public List<GraphNode> GetNeighbors(GraphNode node)
+        public GraphNode GetNeighbors(GraphNode node)
         {
-            //iterate list
-            for (int i = 0; i < AdjList.Count; i++)
+            if (AdjList.Count == 0) //empty graph
             {
-                //find node that matches
-                //return it's list
+                return null;
+            }
+            else
+            {
+                //iterate list
+                for (int i = 0; i < AdjList.Count; i++)
+                {
+                    //find node that matches
+                    if (AdjList[i].Value == node.Value)
+                    {
+                        return AdjList[i]; //because it is a linked list I don't need to iterate
+                    }
+                }
+                //went through graph and it isn't in it
+                Console.WriteLine($"Node with value {node.Value} isn't in the graph");
+                return null;
             }
         }
 
