@@ -10,6 +10,7 @@ We were asked to create a class for graphs represented as adjacency lists.
 I utilized Lists.
 I created a new graphnode to hold the needed properties (value, if it has been visted, edgeweights and a next pointer)
 I assumed the value would be of type int.
+
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## API
