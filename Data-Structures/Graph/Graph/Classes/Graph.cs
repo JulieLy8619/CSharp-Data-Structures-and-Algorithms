@@ -9,6 +9,11 @@ namespace Graph.Classes
         //list of link list of graphnodes
         public List<GraphNode> AdjList = new List<GraphNode>();
 
+        public Graph()
+        {
+            AdjList = null;
+        }
+
         /// <summary>
         /// adds a node to the "graph"
         /// </summary>

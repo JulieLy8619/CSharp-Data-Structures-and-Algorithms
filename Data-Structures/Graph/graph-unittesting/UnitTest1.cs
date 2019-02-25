@@ -1,15 +1,69 @@
 using System;
 using Xunit;
+using Graph.Classes;
 
 namespace graph_unittesting
 {
     public class UnitTest1
     {
+        //Node can be successfully added to the graph
+        [Fact]
+        public void TestAddNode()
+        {
+            Graph testGraph1 = new Graph();
+            GraphNode test = new GraphNode(5);
+
+        }
+
+        //An edge can be successfully added to the graph
         [Fact]
         public void Test1()
         {
 
         }
+
+        //A collection of all nodes can be properly retrieved from the graph
+        [Fact]
+        public void Test1()
+        {
+
+        }
+
+        //All appropriate neighbors can be retrieved from the graph
+        [Fact]
+        public void Test1()
+        {
+
+        }
+
+        //Neighbors are returned with the weight between nodes included
+        [Fact]
+        public void Test1()
+        {
+
+        }
+
+        //The proper size is returned, representing the number of nodes in the graph
+        [Fact]
+        public void Test1()
+        {
+
+        }
+
+        //A graph with only one node and edge can be properly returned
+        [Fact]
+        public void Test1()
+        {
+
+        }
+
+        //An empty graph properly returns null
+        [Fact]
+        public void Test1()
+        {
+
+        }
+
     }
 }
 
