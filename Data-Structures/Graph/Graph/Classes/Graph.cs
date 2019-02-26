@@ -148,6 +148,11 @@ namespace Graph.Classes
             return AdjList.Count;
         }
 
+        /// <summary>
+        /// traverses the graph
+        /// </summary>
+        /// <param name="graphStart">the graph</param>
+        /// <returns>a list of the nodes in the order they were visted</returns>
         public static List<GraphNode> BreadthFirst(GraphNode graphStart)
         {
             List<GraphNode> returnAnswer = new List<GraphNode>();
