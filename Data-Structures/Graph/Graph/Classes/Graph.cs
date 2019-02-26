@@ -148,5 +148,27 @@ namespace Graph.Classes
             return AdjList.Count;
         }
 
+        public static List<GraphNode> BreadthFirst(GraphNode graphStart)
+        {
+            List<GraphNode> returnAnswer = new List<GraphNode>();
+            Queue<GraphNode> methodQ = new Queue<GraphNode>();
+            methodQ.Enqueue(graphStart);
+
+            while (methodQ.TryPeek(out graphStart))
+            {
+                GraphNode front = methodQ.Dequeue();
+                returnAnswer.Add(front);
+                while (front.Next != null)
+                {
+                    if (front.Next.Visted == false)
+                    {
+                        front.Next.Visted = true;
+                        methodQ.Enqueue(front.Next);
+                    }
+                }
+            }
+            return returnAnswer;
+        }
+
     }
 }
