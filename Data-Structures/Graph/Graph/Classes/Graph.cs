@@ -7,11 +7,11 @@ namespace Graph.Classes
     public class Graph
     {
         //list of link list of graphnodes
-        public List<GraphNode> AdjList = new List<GraphNode>();
+        public List<GraphNode> AdjList { get; set; }
 
         public Graph()
         {
-            AdjList = null;
+            AdjList = new List<GraphNode>();
         }
 
         /// <summary>
@@ -23,7 +23,7 @@ namespace Graph.Classes
         {
             GraphNode newNode = new GraphNode(value);
             //check if it is already in the graph
-            if (AdjList.Contains(newNode) == true) //it is in the table
+            if (AdjList != null && AdjList.Contains(newNode) == true) //it is in the table
             {
                 Console.WriteLine($"Node with value {newNode.Value} is already in the graph");
                 return null; //since nothing new added, return null
