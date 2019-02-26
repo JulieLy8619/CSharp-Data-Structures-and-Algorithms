@@ -23,3 +23,8 @@ The abilities of this class are:
 - GetNodes: returns all the nodes in the graph
 - GetNeighbors: returns the neighbors of a node
 - Size: returns the number of nodes in the graph
+- BreadthFirst: traverses through the graph and returns the order the nodes were checked/visited in
+
+## Solution
+Whiteboard for breadthfirst traversal
+![breadthfirstWB](../../../assets/breadthfirstgraph.jpg)

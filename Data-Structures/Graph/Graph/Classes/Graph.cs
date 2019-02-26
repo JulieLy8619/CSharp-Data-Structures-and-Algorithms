@@ -7,11 +7,11 @@ namespace Graph.Classes
     public class Graph
     {
         //list of link list of graphnodes
-        public List<GraphNode> AdjList = new List<GraphNode>();
+        public List<GraphNode> AdjList { get; set; }
 
         public Graph()
         {
-            AdjList = null;
+            AdjList = new List<GraphNode>();
         }
 
         /// <summary>
@@ -23,7 +23,7 @@ namespace Graph.Classes
         {
             GraphNode newNode = new GraphNode(value);
             //check if it is already in the graph
-            if (AdjList.Contains(newNode) == true) //it is in the table
+            if (AdjList != null && AdjList.Contains(newNode) == true) //it is in the table
             {
                 Console.WriteLine($"Node with value {newNode.Value} is already in the graph");
                 return null; //since nothing new added, return null
@@ -146,6 +146,33 @@ namespace Graph.Classes
         public int Size()
         {
             return AdjList.Count;
+        }
+
+        /// <summary>
+        /// traverses the graph
+        /// </summary>
+        /// <param name="graphStart">the graph</param>
+        /// <returns>a list of the nodes in the order they were visted</returns>
+        public static List<GraphNode> BreadthFirst(GraphNode graphStart)
+        {
+            List<GraphNode> returnAnswer = new List<GraphNode>();
+            Queue<GraphNode> methodQ = new Queue<GraphNode>();
+            methodQ.Enqueue(graphStart);
+
+            while (methodQ.TryPeek(out graphStart))
+            {
+                GraphNode front = methodQ.Dequeue();
+                returnAnswer.Add(front);
+                while (front.Next != null)
+                {
+                    if (front.Next.Visted == false)
+                    {
+                        front.Next.Visted = true;
+                        methodQ.Enqueue(front.Next);
+                    }
+                }
+            }
+            return returnAnswer;
         }
 
     }
